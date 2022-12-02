@@ -1,8 +1,18 @@
-.row {
-    display: flex;
-  }
-  
-.column {
-    flex: 33.33%;
-    padding: 5px;
-  }
+.cachorro {
+  object-fit: fill
+}
+
+.onca {
+  height: 600px;
+}
+
+.pinguim {
+  object-fit: fill
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
