@@ -1,31 +1,10 @@
-h1 {
-    font-family: Verdana; 
-    font-size: 20px;
-    color: brown;
+#navbaricon {
+    float: left; 
     text-align: center;
-}
-
-.paragrafo {
-    background-color: yellow;
-    font-size: 14px;
-}
-
-.botao {
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 12px;
-    border-top: 20px;
-}
-
-.body {
-    background-image: url("nuvens.jpg!d");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.video {
-    width: 420;
-     height: 315;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 17px; 
+    width: 17px;
 }
 
 .navbar {
@@ -51,13 +30,39 @@ h1 {
     color: black;
 }
 
-#navbaricon {
-    float: left; 
+.body {
+    background-image: url("nuvens.jpg!d");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: Verdana; 
+    font-size: 20px;
+    color: yellow;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    height: 17px; 
-    width: 17px;
+}
+
+.video {
+    width: 420;
+    height: 315;
+}
+
+.paragrafo {
+    background-color: rgba(241, 111, 241, 0.551);
+    font-size: 14px;
+}
+
+.botao {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 12px;
+    border-top: 20px;
+}
+
+.container {
+    display: flexbox;
+    flex-direction: column;
 }
 
 .footer {
@@ -68,7 +73,4 @@ h1 {
    text-align: center;
 }
 
-.container {
-    display: flexbox;
-    flex-direction: column;
-}
+
