@@ -1,20 +1,13 @@
-.column {
-  object-fit: fill
-}
-
-.onca {
-  height: 600px;
-}
-
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.div imagem {
-  width: calc(100%/3);
   justify-content: space-evenly;
   align-items: space-evenly;
-  align-content: space-evenly;
+}
+
+img {
+  width: calc(100%/3);
+  height: 700px;
+  object-fit: fill
 }
