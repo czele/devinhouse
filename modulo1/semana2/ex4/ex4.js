@@ -1,8 +1,17 @@
-var num = 0
-var soma = 0
+var soma = 0;
 
-while(num != -1) {
-    num = parseInt(window.prompt('Que números deseja somar?'))
+do {
+    var num = parseFloat(window.prompt('Que números deseja somar?'));
+    if (num === null) {
+        break;
+    } 
+
+    if (isNaN(num) || num === -1) {
+        continue;
+    }
+    
     soma += num
-    window.alert(`${soma}`)
+}
+while(num !== -1) {
+    window.alert(`Sua soma dá ${soma}`)
 }

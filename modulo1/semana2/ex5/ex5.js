@@ -1,17 +1,18 @@
-var numeroden = parseInt(window.prompt('Que número deseja verificar:'));
-parseInt(numeroden);
-var contadorpar = 0; var somapar = 0;
-var contadorimpar = 0; var somaimpar = 0;
+var numero = parseInt(window.prompt('Que número deseja verificar:'));
 
-for (i=0; i<=numeroden; i++) {
-    if(i%2==0) {
-        contadorpar++;
-        somapar += contadorpar;
-        window.alert(`A quantidade de números pares é: ${contadorpar}`)
+if (isNaN(numero)) {
+    window.alert('Número inválido');
+}
+else {
+    var pares = 0;
+    var impares = 0;
+    for (i=0; i <= numeros; i++) {
+        if (i % 2 === 0){
+            pares += 1;
+        }
+        else {
+            impares += 1;
+        }
     }
-    else{
-        contadorimpar++;
-        somaimpar += contadorimpar;
-        window.alert(`A quantidade de números ímpares é: ${contadorimpar}`)
-    } 
+    window.alert(`Existem ${pares} números pares e ${impares} números ímpares`)
 }
