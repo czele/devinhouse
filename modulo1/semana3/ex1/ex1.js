@@ -5,10 +5,9 @@ while (elementolista !== null) {
     elementolista = window.prompt('O que deseja adicionar na lista: ');
     if(elementolista && !isNaN(elementolista)) {
         lista.push(elementolista);
-        //lista.pop()
     }
-    //lista.slice(0, -1)
 }
+//lista.pop()
 
 console.log(lista)
 
