@@ -1,4 +1,4 @@
-var lista = [];
+var lista1 = [];
 var elementolista = 1;
 
 while (elementolista !== null) {
