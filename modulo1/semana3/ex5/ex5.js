@@ -1,6 +1,8 @@
 const somaTudo = (...num) => {
     let soma = 0;
-    for (i=0; i<num.length; i++){ 
+    /*num.forEach(numero => {
+        total += numero})*/
+    for (i=0; i < num.length; i++){ 
         soma += num[i];}
     return soma
 }
