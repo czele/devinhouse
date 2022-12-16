@@ -1,16 +1,12 @@
-var dadospessoais = {
-    nome: 'Camila',
-    sobrenome: 'Zelenovsky'
+const objUm = { a: 1, b: 2 }
+const objDois = { c: 3, d: 4 }
+
+const mesclaObjeto = (objA, objB) => {
+    return { ...objA, ...objB }
 }
 
-var caracteristicas = {
-    sexo: 'feminino', 
-    corcabelo: 'castanho',
-}
+//const mesclaObjeto = (objA, objB) => ({ ...objA, ...objB })
 
-const pessoa = (dadospessoais, caracteristicas) => {
-    var conjunto = {...dadospessoais, ...caracteristicas}
-    return conjunto
-}
+const novoObjeto = (mesclaObjeto(objUm, objDois))
 
-console.log(pessoa(dadospessoais, caracteristicas))
+console.log(novoObjeto)
