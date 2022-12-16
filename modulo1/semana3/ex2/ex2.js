@@ -1,10 +1,15 @@
-const mensagemOla = (nome) => {return `Helo ${nome}`}
+const entradaNome = document.getElementById('nome')
+const botaoAcao = document.getElementById('acao')
+const pMensagem = document.getElementById('mensagem')
 
-const btn = document.querySelector("send");
-btn.addEventListener("click", function(e) {
-    e.preventDefault();
-    const nome = document.querySelector("#nome");
-    var value = nome.value;
+const mensagemOla = nome => `Olá, ${nome}`
+
+console.log(mensagemOla())
+
+botaoAcao.addEventListener('click', () => {
+    pMensagem.innerHTML = mensagemOla(entradaNome.value);
+    /*const nome = entradaNome.value;
+    const msg = mensagemOla(nome);
+    console.log(msg);
+    pMensagem.innerHTML = msg*/
 })
-
-console.log(mensagemOla(this.value))
