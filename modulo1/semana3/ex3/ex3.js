@@ -1,5 +1,5 @@
-var a = []; var b = [];
-var elementolista1 = 1; var elementolista2 = 1;
+/*let a = []; var b = [];
+let elementolista1 = 1; let elementolista2 = 1;
 
 while (elementolista1 !== null) {
     elementolista1 = window.prompt('O que deseja adicionar na 1ª lista: ');
@@ -12,11 +12,10 @@ while (elementolista2 !== null) {
     if(elementolista2 && !isNaN(elementolista2)) {
         lista2.push(elementolista2);
     }
-}
+}*/
 
-const concatena = (lista1, lista2) => {
-    var concatenacao = [...lista1, ...lista2];
-    return concatenacao;
-}
+const concatena = (lista1, lista2) => {return [...lista1, ...lista2]}
 
-console.log(concatena(a, b));
+const novoArray = concatena([1, 2, 3], [4, 5, 6])
+
+console.log(novoArray)
