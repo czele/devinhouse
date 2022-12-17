@@ -1,4 +1,18 @@
-const uneDobraRetorna = (array1, ...numeros) => {
-    
+const uneDobraRetorna = (vetor, ...resto) => {
+    for (i = 0; i< resto.length; i++) {
+        resto[i] *= 2;
+    }
+    //const dobrado = resto.map(num => num *2)
+
+    console.log(resto);
 }
-uneDobraRetorna( 1, 2, 3, 5, 6)
+
+
+const r1 = uneDobraRetorna([1, 2, 3], 4, 4)
+console.log(r1) // [1, 2, 3, 8, 8]
+
+const r2 = uneDobraRetorna([2], 10, 4, 8) 
+console.log(r2) // [2, 20, 8, 16]
+
+const r3 = uneDobraRetorna([6, 8]) 
+console.log(r3) // [6, 8]
