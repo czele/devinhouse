@@ -1,9 +1,10 @@
-const pessoa = {
+const ada = {
     nome: 'Ada',
     idade: 36,
     profissao: 'matemática'
   };
 
-desestruturando = ({ nome, idade, profissao}) => console.log(`Esta é ${nome}, tem ${idade} anos e é ${profissao}.`)
+const montaMensagem = ({ nome, idade, profissao}) =>  `Esta é ${nome}, tem ${idade} anos e é ${profissao}.`
 
-desestruturando(pessoa)
+const mensagem = montaMensagem(ada)
+console.log(mensagem)
