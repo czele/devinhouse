@@ -1,3 +1,5 @@
+function ex2(idade) {
+
 var idade = window.prompt('Qual sua idade?');
 
 if (idade <= 15) {
@@ -5,4 +7,4 @@ if (idade <= 15) {
 if (idade > 15 && idade <= 64) {
     window.alert('Você é considerado adulto')};
 if (idade > 64) {
-    window.alert('Você é considerado idoso')};
+    window.alert('Você é considerado idoso')};}
