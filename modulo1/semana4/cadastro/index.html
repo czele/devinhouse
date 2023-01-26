@@ -35,20 +35,19 @@
                 <label>Conta:</label><br>
                 <input type="text" id="conta"><br><br>
                 <label>Operação:</label><br>
-                <input type="text" id="operacao"><br><br>
+                    <select id="operacao">
+                        <option value="saldo">Ver Saldo</option>
+                        <option value="deposito">Depósito</option>
+                        <option value="saque">Saque</option>
+                    </select><br><br>
                 <label>Valor:</label><br>
                 <input type="text" id="valor"><br><br>
                 <label>Senha:</label><br>
                 <input type="text" id="senhaconta"><br><br>
-                <button id="bntenviarconta">Enviar</button>
+                <button type="submit">Enviar</button>
                 <button id="bntlimparconta">Limpar</button>
             </form>
         </div>
-    </div>
-    <div class="mostrasaldo">
-
-
-        
     </div>
     <footer><br>
         <h4>Banco da Camila &#169;</h4>
