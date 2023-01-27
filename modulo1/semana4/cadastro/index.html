@@ -17,17 +17,17 @@
         <div class="cadastro">
             <form id="formcadastro">
                 <label>Nome Completo:</label><br>
-                <input type="text" id="nome"><br><br>
+                <input required type="text" id="nome"><br><br>
                 <label>CPF:</label><br>
-                <input type="text" id="cpf"><br><br>
+                <input required type="text" id="cpf"><br><br>
                 <label>Celular:</label><br>
-                <input type="text" id="celular"><br><br>
+                <input required type="text" id="celular"><br><br>
                 <label>Senha:</label><br>
-                <input type="text" id="senhacadastro"><br><br>
+                <input required type="text" id="senhacadastro"><br><br>
                 <label>Confirmação da Senha:</label><br>
-                <input type="text" id="confsenha"><br><br>
-                <button id="bntenviarcadastro">Enviar</button>
-                <button id="bntlimparcadastro">Limpar</button>
+                <input required type="text" id="confsenha"><br><br>
+                <button type="submit" id="bntenviarcadastro">Enviar</button>
+                <button type="reset" id="bntlimparcadastro">Limpar</button>
             </form>
         </div>
         <div class="conta">
@@ -36,22 +36,23 @@
                 <input type="text" id="conta"><br><br>
                 <label>Operação:</label><br>
                     <select id="operacao">
-                        <option value="saldo">Ver Saldo</option>
-                        <option value="deposito">Depósito</option>
-                        <option value="saque">Saque</option>
+                        <option>Selecione a Opção</option>
+                        <option value="0">Saldo</option>
+                        <option value="1">Depósito</option>
+                        <option value="2">Saque</option>
                     </select><br><br>
-                <label>Valor:</label><br>
-                <input type="text" id="valor"><br><br>
+               <label>Valor:</label><br>
+                <input type="number" min="0" id="valor"><br><br>
                 <label>Senha:</label><br>
                 <input type="text" id="senhaconta"><br><br>
                 <button type="submit">Enviar</button>
-                <button id="bntlimparconta">Limpar</button>
+                <button type="reset" id="bntlimparconta">Limpar</button>
             </form>
         </div>
     </div>
     <footer><br>
         <h4>Banco da Camila &#169;</h4>
-        <p>Rua 4, nº 100 <br>Sala 31, Cidade Jardim<br> Rio Claro - SP</p>
+        <p>Rua 4, nº 100 <br> Rio Claro - SP</p>
     </footer>
 </body>
 </html>
