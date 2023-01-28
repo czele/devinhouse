@@ -27,31 +27,31 @@ pegarInputCadastro.addEventListener('submit', (event) => {
 
 });
 
-
 const pegarInputConta = document.getElementById('formconta');
 pegarInputConta.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const transacao = {
     saldo: 0,
-    conta: event.target.conta.value,
-    operacao: event.target.operacao.value,
-    valor: event.target.valor.value,
+    conta: parseInt(event.target.conta.value),
+    operacao: parseInt(event.target.operacao.value),
+    valor: parseInt(event.target.valor.value),
     senhaConta: event.target.senhaconta.value
     }
     transacoes.push(transacao)
 
    switch (transacao.operacao) {
         case '2':
-            saque(transacoes.conta, transacoes.valor);
+            saque(1, transacao.valor);
             break;
         case '1':
-            deposito(transacoes.conta, transacoes.valor);
+            deposito(1, transacao.valor);
             break;
         case '0':
-            consulta(transacao.conta);
+            consulta(1);
             break;
     }
+    return transacoes
 });
 
 
@@ -63,6 +63,7 @@ desabilitaValor.onchange = (event) => {
         valorOperacao.disabled = false;
     }
 }
+
 
 const saque = (conta, valor) => {
     if (valor <= 0 ) {
@@ -88,11 +89,11 @@ deposito = (conta, valor) => {
         msgDepositoInsuficiente.innerHTML = 'Valor incorreto, por favor, digite novamente o valor'
         document.getElementById('formconta').appendChild(msgDepositoInsuficiente)
     } else {
-    let deposito = transacoes.saldo + valor;
-    const msgDeposito = document.createElement('p');
-    msgDeposito.innerHTML = `Depósito de ${valor} feito com sucesso.\n
-    Seu saldo é de ${deposito} reais.`
-    document.getElementById('formconta').appendChild(msgDeposito)
+        let deposito = transacoes.saldo + valor;
+        const msgDeposito = document.createElement('p');
+        msgDeposito.innerHTML = `Depósito de ${valor} feito com sucesso.\n
+        Seu saldo é de ${deposito} reais.`
+        document.getElementById('formconta').appendChild(msgDeposito)
 }}
 
 consulta = (conta) => {
