@@ -1,11 +1,58 @@
+//Varivável para cadastrar lista de contas
+let contas = [];
+
+//Pegando formulário
+const formulario = document.getElementById('formcadastro')
+
+//Function para enviar o formulário
+const enviarFormulario = (event) => {
+    //Evita o funcionamento padrão do submit do EventListener
+    event.preventDefault();
+
+    //Validar senhas
+    const senha = event.target.senhaCadastro.value;
+    const confirmacaoSenha = event.target.confSenha.value;
+
+    if(senha !== confirmacaoSenha) {
+        window.alert("As senhas não conferem, favor conferir as senhas");
+        //O return para a função caso a senha não confira
+        return;
+    };
+
+    //Adicionar contas no Array   
+    const nome = event.target.nome.value;
+    const cpf = event.target.cpf.value;
+    const celular = event.target.celular.value;
+    const numConta = new Date().getTime();
+    const saldo = 0;
+
+    const contaCriada = {
+        conta: numConta,
+        nome,
+        cpf,
+        celular,
+        senha,
+        saldo
+    };
+    
+    contas.push(contaCriada);
+
+    const msgId = document.createElement('span');
+    msgId.innerHTML = `Conta criada com sucesso. Seu número da conta é ${contaCriada.conta}`
+    document.getElementById('formcadastro').appendChild(msgId) 
+};
+
+formulario.addEventListener('submit', enviarFormulario);
+    
+/*
 const cadastros = [];
 const transacoes = [];
 let saldo = 100;
 const valorOperacao = document.getElementById('valor');
 const desabilitaValor = document.getElementById('operacao');
 
-const pegarInputCadastro = document.getElementById('formcadastro')
-pegarInputCadastro.addEventListener('submit', (event) => {
+
+formulario.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const cadastroFinal = {
@@ -14,7 +61,8 @@ pegarInputCadastro.addEventListener('submit', (event) => {
         "celular": event.target.celular.value,
         "senha": event.target.senhacadastro.value,
         "confirmacaosenha": event.target.confsenha.value,
-        "id": new Date().getTime()
+        "id": new Date().getTime(),
+        "saldo": 0
     }
        if (cadastroFinal.senha !== cadastroFinal.confirmacaosenha) {
             window.alert("As senhas não conferem, favor conferir as senhas")
@@ -101,4 +149,4 @@ consulta = (conta) => {
     const msgConsulta = document.createElement('p');
     msgConsulta.innerHTML = `Seu saldo é ${saldo}`
     document.getElementById('formconta').appendChild(msgConsulta)
-};
+};*/
