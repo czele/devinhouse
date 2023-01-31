@@ -1,5 +1,14 @@
 //Varivável para cadastrar lista de contas
-let contas = [];
+let contas = [
+    {
+        nome: 'Thais Bertoldo', 
+        cpf: '999.999.999.99', 
+        celular: '(99) 99999-9999', 
+        senha: '1', 
+        conta: 1, 
+        saldo: 100,
+    },
+];
 
 //Pegando formulário
 const formulario = document.getElementById('formcadastro')
@@ -43,110 +52,114 @@ const enviarFormulario = (event) => {
 };
 
 formulario.addEventListener('submit', enviarFormulario);
-    
-/*
-const cadastros = [];
-const transacoes = [];
-let saldo = 100;
-const valorOperacao = document.getElementById('valor');
-const desabilitaValor = document.getElementById('operacao');
+
+//Obter formulário de operações
+const formOperacao = document.getElementById('formconta');
+
+const sacar = (conta, valor) => {
+    //Verifica se o valor é maior que 0
+    if(valor > 0) {
+        //Verifica se tem saldo disponível
+        //Saque realizado
+        if(conta.saldo >= valor) {
+            const novoSaldo = conta.saldo - valor
+            conta.saldo = novoSaldo;
+
+            const msgDepositoSucesso = document.createElement('span');
+            msgDepositoSucesso.innerHTML = `Saque de ${valor} reais feito com sucesso. Seu saldo agora é de ${novoSaldo} reais`;
+            document.getElementById('formconta').appendChild(msgDepositoSucesso);
+            return;
+    }
+    //Saldo insuficiente
+    } else {
+        const msgSaldoInsuficiente = document.createElement('span');
+        msgSaldoInsuficiente.innerHTML = 'Saldo insuficiente.';
+        document.getElementById('formconta').appendChild(msgSaldoInsuficiente);
+        return;
+    }
+
+    const msgSaldoInsuficiente = document.createElement('span');
+    msgSaldoInsuficiente.innerHTML = 'Saldo insuficiente.';
+    document.getElementById('formconta').appendChild(msgSaldoInsuficiente);
+};
+
+const depositar = (conta, valor) => {
+    if(valor > 0) {
+        const novoSaldo = conta.saldo + valor
+        conta.saldo = novoSaldo;
+
+        const msgDepositoSucesso = document.createElement('span');
+        msgDepositoSucesso.innerHTML = `Depósito de ${valor} reais feito com sucesso. Seu saldo agora é de ${novoSaldo} reais`;
+        document.getElementById('formconta').appendChild(msgDepositoSucesso);
+        return;
+    } else {
+    const msgDepositoInsuficiente = document.createElement('span');
+    msgDepositoInsuficiente.innerHTML = 'Valor incorreto, por favor, digite novamente o valor';
+    document.getElementById('formconta').appendChild(msgDepositoInsuficiente);
+    }
+};
+
+const consultarSaldo = (conta) => {
+    const msgSaldo = document.createElement('span');
+    msgSaldo.innerHTML = `Seu saldo é ${conta.saldo}`;
+    document.getElementById('formconta').appendChild(msgSaldo);
+};
 
 
-formulario.addEventListener('submit', (event) => {
+//Enviar formulário de operação
+const enviarFormularioOperacao = (event) => {
     event.preventDefault();
 
-    const cadastroFinal = {
-        "nome": event.target.nome.value,
-        "cpf": event.target.cpf.value,
-        "celular": event.target.celular.value,
-        "senha": event.target.senhacadastro.value,
-        "confirmacaosenha": event.target.confsenha.value,
-        "id": new Date().getTime(),
-        "saldo": 0
-    }
-       if (cadastroFinal.senha !== cadastroFinal.confirmacaosenha) {
-            window.alert("As senhas não conferem, favor conferir as senhas")
-        } else {
-            cadastros.push(cadastroFinal) 
-            const msgId = document.createElement('p');
-            msgId.innerHTML = `Conta criada com sucesso. Seu número da conta é ${cadastroFinal.id}`
-            document.getElementById('formcadastro').appendChild(msgId) 
+    //Obter valores digitados no formulário
+    const conta = parseInt(event.target.conta.value);
+    const operacao = event.target.operacao.value;
+    const valor = parseFloat(event.target.valor.value);
+    const senha = event.target.senhaConta.value;
+
+    //Validar conta e senha
+    const contaAtual = contas.find((c) => c.conta === conta)
+
+    //Valida se a conta existe
+    if(!contaAtual) {
+        window.alert('Conta inválida');
+        return;
     }
 
-});
-
-const pegarInputConta = document.getElementById('formconta');
-pegarInputConta.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const transacao = {
-    saldo: 0,
-    conta: parseInt(event.target.conta.value),
-    operacao: parseInt(event.target.operacao.value),
-    valor: parseInt(event.target.valor.value),
-    senhaConta: event.target.senhaconta.value
+    if(contaAtual.senha !== senha){
+    window.alert('Senha incorreta');
+    return;
     }
-    transacoes.push(transacao)
 
-   switch (transacao.operacao) {
-        case '2':
-            saque(1, transacao.valor);
+    //Chamar a função correta
+    switch (operacao) {
+        case '0':
+            consultarSaldo(contaAtual);
             break;
         case '1':
-            deposito(1, transacao.valor);
+            depositar(contaAtual, valor);
             break;
-        case '0':
-            consulta(1);
+        case '2':
+            sacar(contaAtual, valor);
+            break;
+        default:
+            window.alert('Operação inválida');
             break;
     }
-    return transacoes
-});
+};
 
+formOperacao.addEventListener('submit', enviarFormularioOperacao);
 
-desabilitaValor.onchange = (event) => {
-    if (desabilitaValor.value == 0) {
-        valorOperacao.disabled = true;
+//Desabilitar campo de valor no saque
+const operacao = document.getElementById('operacao');
+operacao.addEventListener('change', (event) => {
+    const valorOperacao = document.getElementById('valor');
+
+    if(event.target.value === '0') {  
+    valorOperacao.disabled = true;
+    valorOperacao.value = '';
+    return;
     }
     else {
-        valorOperacao.disabled = false;
-    }
-}
-
-
-const saque = (conta, valor) => {
-    if (valor <= 0 ) {
-        const msgSaqueInsuficiente1 = document.createElement('p');
-        msgSaqueInsuficiente1.innerHTML = 'Valor incorreto, por favor, digite novamente o valor'
-        document.getElementById('formconta').appendChild(msgSaqueInsuficiente1)
-    } else { 
-        if(saldo < valor) {
-            const msgSaqueInsuficiente2 = document.createElement('p');
-        msgSaqueInsuficiente2.innerHTML = 'Valor incorreto, por favor, digite novamente o valor'
-        document.getElementById('formconta').appendChild(msgSaqueInsuficiente2)
-        } else {
-            let saque = saldo - valor
-            console.log(`Saque de ${valor} feito com sucesso.\n
-            Seu saldo é de ${saque} reais.`)
-        }
-    }
-}
-
-deposito = (conta, valor) => {
-    if (valor <= 0 ) {
-        const msgDepositoInsuficiente = document.createElement('p');
-        msgDepositoInsuficiente.innerHTML = 'Valor incorreto, por favor, digite novamente o valor'
-        document.getElementById('formconta').appendChild(msgDepositoInsuficiente)
-    } else {
-        let deposito = transacoes.saldo + valor;
-        const msgDeposito = document.createElement('p');
-        msgDeposito.innerHTML = `Depósito de ${valor} feito com sucesso.\n
-        Seu saldo é de ${deposito} reais.`
-        document.getElementById('formconta').appendChild(msgDeposito)
-}}
-
-consulta = (conta) => {
-    let saldo = transacoes.saldo;
-    const msgConsulta = document.createElement('p');
-    msgConsulta.innerHTML = `Seu saldo é ${saldo}`
-    document.getElementById('formconta').appendChild(msgConsulta)
-};*/
+    valorOperacao.disabled = false;
+    };
+});
