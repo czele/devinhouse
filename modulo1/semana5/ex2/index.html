@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+    <h3>Exercício 2</h3>
+    <p>Em três arquivos (index.html, app.js, Fatura.js) resolva o seguinte exercício:
+    Inclua o arquivo app.js em index.html como type="module".<br>
+    Em Fatura.js, crie uma classe chamada Fatura que possa ser utilizada por uma fábrica, representando um item vendido e a exporte como padrão (export default).<br><br>
+    
+    Uma fatura deve incluir as seguintes informações como atributos :
+    <ul>    
+        <li>id: number identificador do item faturado (código do produto)</li>
+        <li>descricao: string com a descrição do item</li>
+        <li>quantia: number com a quantidade comprada do item</li>
+        <li>preco: number com o preço unitário do item</li></ul><br>
+    
+    Sua classe deve ter um construtor que inicialize todos os atributos.<br>
+    Se a quantidade não for positiva, ela deve ser indicada como 0 (zero).<br>
+    Se o preço por item não for positivo ele deve ser indicado como 0.<br>
+    
+    Implemente um método chamado obterValorTotal() que calcula o valor da fatura (isso é, multiplica a quantidade pelo preço do item).<br>
+    Importe a classe Fatura em app.js e crie pelo menos uma instância desta classe para testar a implementação.<br>
+    <br>
+    Exemplos:<br>
+    
+    const melao = new Fatura(123, "Melão", 2, 3);<br>
+    
+    const valor = melao.obterValorTotal();<br>
+    
+    console.log(valor); // 6<br><br>
+    Extra: <br>
+    Crie um método getter de nome valorTotal que faz o mesmo cálculo implementado em obterValorTotal, mas que possa ser acessado sem o uso dos parêntesis.</p>
+</body>
+</html>

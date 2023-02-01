@@ -156,6 +156,7 @@ operacao.addEventListener('change', (event) => {
 
     if(event.target.value === '0') {  
     valorOperacao.disabled = true;
+    //Se colocar um valor e depois selecionar consulta apaga o número do input
     valorOperacao.value = '';
     return;
     }

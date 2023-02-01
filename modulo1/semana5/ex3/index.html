@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3</title>
+</head>
+<body>
+    <h3>Exercício 3</h3>
+   <p>
+    Em três arquivos (index.html, app.js, Personagem.js) resolva o seguinte exercício:<br>
+    Inclua o arquivo app.js em index.html como type="module".<br>
+    Para modelar um jogo de ação, em Personajem.js, crie a classe Personagem que possua os atributos nome e percentualVida e a exporte como padrão (export default).<br>
+    O nome deve ser indicado no construtor da classe, e o percentual de vida é iniciado com 100.<br>
+    Crie o método sofreuDano(percentualDano) cuja implementação diminua o valor de percentualDano do percentual de vida do personagem (até o limite de zero).<br>
+    Crie também o método usouKitMedico() que adiciona 10 pontos ao percentual de vida do personagem (até o limite de 100).<br>
+    Importe a classe Personagem em app.js e crie pelo menos uma instância de personagem para testar.<br><br>
+    
+    Exemplo:<br>
+    
+    const alyx = new Personagem("Alyx");<br>  
+    console.log(alyx.percentualVida); // 100<br>
+    alyx.sofreuDano(50);<br>
+    console.log(alyx.percentualVida); // 50<br>
+    alyx.usouKitMedico();<br>
+    console.log(alyx.percentualVida); // 60<br></p>
+</body>
+</html>

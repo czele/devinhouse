@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5</title>
+</head>
+<body>
+    <h3>Exercício 5</h3>
+    <p>Em três arquivos (index.html, app.js, CalculadoraDeArea.js) resolva o seguinte exercício:<br>
+        Inclua o arquivo app.js em index.html como type="module".<br>     
+        Em CalculadoraDeArea.js, crie uma classe CalculadoraDeArea que tenha os atributos tipo (string), base (number) e altura (number).<br>   
+        Implemente o método calcular() que faça o cálculo da área conforme o tipo do polígono informado:<br><br>
+        
+        "triangulo": (base * altura) / 2<br>
+        "quadrado" e "retangulo" : base * altura<br>
+        Importe a classe CalculadoraDeArea em app.js e teste a implementação com instâncias dessa classe para um triângulo de base 6 cm e altura 8 cm, para um quadrado de base e altura de 4 cm e um retângulo de base 4 cm e altura 6 cm.<br><br>
+        
+        Imprima o resultado calculado no console.<br><br>
+        
+        Exemplos: <br><br>
+        
+        const quadA = new CalculadoraDeArea("quadrado", 6, 6);<br>
+        const areaQA = quadA.calcular();<br>
+        console.log(areaQA); // 36<br><br>
+        
+        const triangB = new CalculadoraDeArea("triangulo", 8, 7);<br>
+        const areaTB = triangB.calcular();<br>
+        console.log(areaTB); // 28</p>
+</body>
+</html>
