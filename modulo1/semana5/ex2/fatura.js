@@ -1,4 +1,9 @@
 export default class Fatura {
+    id
+    descricao
+    quantia
+    preco
+
     constructor (id, descricao, quantia, preco) {
     this.id = id;
     this.descricao = descricao;
@@ -12,11 +17,14 @@ export default class Fatura {
     if(preco < 0) {
         this.preco = 0;
     }
-
     }
 
     obterValorTotal = () => {
-        let fatura = this.quantia * this.preco;
-        return fatura;
+        return this.quantia * this.preco;
+    }
+
+    get valorTotal() {
+        return this.quantia * this.preco;
+        //return this.valorTotal()
     }
 }
