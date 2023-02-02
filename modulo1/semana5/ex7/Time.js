@@ -8,4 +8,8 @@ class Time {
         this.golmarc = golmarc;
         this.golsof = golsof;
     }
+
+    computarPartida () {}
+
+    exibirSituacao() {}
 }
