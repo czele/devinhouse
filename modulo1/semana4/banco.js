@@ -67,7 +67,7 @@ const sacar = (conta, valor) => {
 
             const msgDepositoSucesso = document.createElement('span');
             msgDepositoSucesso.innerHTML = `Saque de ${valor} reais feito com sucesso. Seu saldo agora é de ${novoSaldo} reais`;
-            document.getElementById('formconta').appendChild(msgDepositoSucesso);
+            document.getElementById('boxextra').appendChild(msgDepositoSucesso);
             return;
     }
     //Saldo insuficiente
@@ -80,7 +80,7 @@ const sacar = (conta, valor) => {
 
     const msgSaldoInsuficiente = document.createElement('span');
     msgSaldoInsuficiente.innerHTML = 'Saldo insuficiente.';
-    document.getElementById('formconta').appendChild(msgSaldoInsuficiente);
+    document.getElementById('boxextra').appendChild(msgSaldoInsuficiente);
 };
 
 const depositar = (conta, valor) => {
@@ -90,19 +90,19 @@ const depositar = (conta, valor) => {
 
         const msgDepositoSucesso = document.createElement('span');
         msgDepositoSucesso.innerHTML = `Depósito de ${valor} reais feito com sucesso. Seu saldo agora é de ${novoSaldo} reais`;
-        document.getElementById('formconta').appendChild(msgDepositoSucesso);
+        document.getElementById('boxextra').appendChild(msgDepositoSucesso);
         return;
     } else {
     const msgDepositoInsuficiente = document.createElement('span');
     msgDepositoInsuficiente.innerHTML = 'Valor incorreto, por favor, digite novamente o valor';
-    document.getElementById('formconta').appendChild(msgDepositoInsuficiente);
+    document.getElementById('boxextra').appendChild(msgDepositoInsuficiente);
     }
 };
 
 const consultarSaldo = (conta) => {
     const msgSaldo = document.createElement('span');
     msgSaldo.innerHTML = `Seu saldo é ${conta.saldo}`;
-    document.getElementById('formconta').appendChild(msgSaldo);
+    document.getElementById('boxextra').appendChild(msgSaldo);
 };
 
 

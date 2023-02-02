@@ -88,8 +88,6 @@ h3 {
     background: #D174F1;
     border-radius: 10px;
     
-    /* Inside auto layout */
-    
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -141,7 +139,7 @@ h3 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-top: 300px;
+    margin-top: 220px;
     gap: 50px;
 }
 
@@ -161,6 +159,17 @@ h3 {
     flex-grow: 0;
 
     
+}
+
+#boxextra {
+    position: absolute;
+    width: 349px;
+    height: 187px;
+    left: 540px;
+    top: 700px;
+
+    background: #D174F1;
+    border-radius: 10px;
 }
 
 footer {
