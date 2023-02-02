@@ -16,37 +16,39 @@
     <div class="container">
         <div class="cadastro">
             <form id="formcadastro">
-                <label>Nome Completo:</label><br>
-                <input required type="text" id="nome"><br><br>
-                <label>CPF:</label><br>
-                <input required type="text" id="cpf"><br><br>
-                <label>Celular:</label><br>
-                <input required type="text" id="celular"><br><br>
-                <label>Senha:</label><br>
-                <input required type="text" id="senhaCadastro"><br><br>
-                <label>Confirmação da Senha:</label><br>
-                <input required type="text" id="confSenha"><br><br>
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
+                <h2 class="tituloBloco">Cadastro de Nova Conta</h2>
+                <label>Nome Completo:</label>
+                <input required type="text" id="nome">
+                <label>CPF:</label>
+                <input required type="text" id="cpf">
+                <label>Celular:</label>
+                <input required type="text" id="celular">
+                <label>Senha:</label>
+                <input required type="text" id="senhaCadastro">
+                <label>Confirmação da Senha:</label>
+                <input required type="text" id="confSenha">
+                <div class="btn"><button type="submit">Enviar</button>
+                <button type="reset">Limpar</button></div>
             </form>
         </div>
         <div class="conta">
             <form id="formconta">
-                <label>Conta:</label><br>
-                <input type="text" id="conta"><br><br>
-                <label>Operação:</label><br>
+                <h2 class="tituloBloco">Movimentaões</h2>
+                <label>Conta:</label>
+                <input type="text" id="conta">
+                <label>Operação:</label>
                     <select id="operacao">
                         <option>Selecione a Opção</option>
                         <option value="0">Saldo</option>
                         <option value="1">Depósito</option>
                         <option value="2">Saque</option>
-                    </select><br><br>
-               <label>Valor:</label><br>
-                <input type="number" min="0" id="valor"><br><br>
-                <label>Senha:</label><br>
-                <input type="text" id="senhaConta"><br><br>
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button><br><br>
+                    </select>
+               <label>Valor:</label>
+                <input type="number" min="0" id="valor">
+                <label>Senha:</label>
+                <input type="text" id="senhaConta">
+                <div class="btn"><button type="submit">Enviar</button>
+                <button type="reset">Limpar</button></div>
             </form>
         </div>
     </div>
