@@ -21,6 +21,28 @@ export default class Time {
         if(pt.siglaTimeA === this.sigla) {
             this.golmarc += pt.golsTimeA;
             this.golsof += pt.golsTimeB;
+            if(pt.golsTimeA > pt.golsTimeB) {
+                this.vit++;
+            }
+            if(pt.golsTimeA = pt.golsTimeB) {
+                this.emp++;
+            }
+            if(pt.golsTimeA < pt.golsTimeB) {
+                this.der++;
+            }
+        }
+        if(pt.siglaTimeB === this.sigla) {
+            this.golmarc += pt.golsTimeB;
+            this.golsof += pt.golsTimeA;
+            if(pt.golsTimeB > pt.golsTimeA) {
+                this.vit++;
+            }
+            if(pt.golsTimeB = pt.golsTimeA) {
+                this.emp++;
+            }
+            if(pt.golsTimeB < pt.golsTimeA) {
+                this.der++;
+            }
         }
 
     }
