@@ -6,7 +6,7 @@ export default class CalculadoraDeArea {
     }
 
     calcular() {
-        if(this.tipo == "quadrado") {
+        if(this.tipo == "quadrado" || this.tipo == "retângulo") {
             return this.base*this.altura
         }
         if(this.tipo == "triangulo") {
