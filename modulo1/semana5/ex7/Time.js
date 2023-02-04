@@ -24,10 +24,10 @@ export default class Time {
             if(pt.golsTimeA > pt.golsTimeB) {
                 this.vit++;
             }
-            if(pt.golsTimeA = pt.golsTimeB) {
+            else if(pt.golsTimeA == pt.golsTimeB) {
                 this.emp++;
             }
-            if(pt.golsTimeA < pt.golsTimeB) {
+            else if(pt.golsTimeA < pt.golsTimeB) {
                 this.der++;
             }
         }
@@ -37,10 +37,10 @@ export default class Time {
             if(pt.golsTimeB > pt.golsTimeA) {
                 this.vit++;
             }
-            if(pt.golsTimeB = pt.golsTimeA) {
+            else if(pt.golsTimeB == pt.golsTimeA) {
                 this.emp++;
             }
-            if(pt.golsTimeB < pt.golsTimeA) {
+            else if(pt.golsTimeB < pt.golsTimeA) {
                 this.der++;
             }
         }

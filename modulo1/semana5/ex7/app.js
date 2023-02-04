@@ -3,7 +3,6 @@ import Time from "./Time.js"
 
 const corinthians = new Time("corinthians", "cor", 0, 0, 0, 0, 0);
 const palmeiras = new Time("palmeiras", "pal", 0, 0, 0, 0, 0);
-const santos = new Time("santos", "san", 0, 0, 0, 0, 0);
 const fluminense = new Time("fluminense", "flu", 0, 0, 0, 0, 0);
 const flamengo = new Time("flamengo", "fla", 0, 0, 0, 0, 0);
 
