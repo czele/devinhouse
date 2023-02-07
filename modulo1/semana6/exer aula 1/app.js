@@ -1,6 +1,12 @@
 const numero = document.getElementById("numero");
 const botao = document.getElementById("botao");
 
+criarSpan = (res) => {
+  const span = document.createElement("p");
+      span.innerText = res;
+      document.body.appendChild(span);
+}
+
 const enviarFormulario = (event) => {
   new Promise((resolve, reject) => {
     if (numero.value % 2 === 0) {
@@ -14,19 +20,13 @@ const enviarFormulario = (event) => {
     }
   })
     .then((res) => {
-      const span = document.createElement("p");
-      span.innerText = res;
-      document.body.appendChild(span);
+      criarSpan(res)
     })
     .catch((res) => {
-      const span = document.createElement("p");
-      span.innerText = res;
-      document.body.appendChild(span);
+      criarSpan(res)
     })
     .finally(() => {
-      const span = document.createElement("p");
-      span.innerText = "Finalizado";
-      document.body.appendChild(span);
+      criarSpan("Finalizado")
     });
 };
 
