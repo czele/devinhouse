@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" async></script>
+    <title>Ex 3</title>
+</head>
+<body>
+    <h3>Exercício 3</h3>
+    <p>Para aprovação de um empréstimo, um banco usa as funções descritas abaixo:<br>
+    - Aprovação do cadastro pessoal<br>
+    - Aprovação do valor solicitado<br>
+    Ambas retornam uma promise para fazer o processamento em segundo plano (no código, este processamento está simulado).</p>
+    <p>Para o cliente instanciado no código abaixo, foram executadas ambas as funções e criadas variáveis para armazenar este retorno.</p>
+    <p>Usando o método 'Promise.all()', recupere o resultado de ambas as promises e imprima 'APROVADO' ou 'REPROVADO', conforme os resultados das promises forem resolvidos ou rejeitados.</p>
+    <p>Por fim, imprima a frase 'Fim do Processamento', qualquer que seja o resultado (resolve ou reject) das promises ('finally').</p>
+
+    <p>function aprovarDadosCadastrais( cliente ) {<br>
+        return new Promise( (resolve, reject) => {<br>
+            if (cliente.cpf === 11111111111)<br>
+                resolve(true);<br>
+            else <br>
+                reject(false);<br>
+        });<br>
+    }<br><br>
+
+    function aprovarValorSolicitado( cliente, valor ) {<br>
+        return new Promise( (resolve, reject) => {<br>
+            if (cliente.margem >= valor)<br>
+                resolve(true);<br>
+            else<br>
+                reject(false);<br>
+        });<br>
+    }<br><br>
+
+    const cliente = { cpf: 11111111111, nome: 'Calleri', margem: 1000.0 };<br>
+    const aprovacaoCadastro = aprovarDadosCadastrais(cliente);<br>
+    const aprovacaoValor = aprovarValorSolicitado(cliente, 300.0);<br><br>
+
+   continue com o tratamento dos resultados de ambas as promises...</p>
+</body>
+</html>

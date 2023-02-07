@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js" async></script>
+    <title>Exercício 8</title>
+</head>
+<body>
+    <h3>Exercício 8</h3>
+    <p>Existe a API 'Random User Generator', que gera usuários fakes para fins de testes e protótipos.<br>
+    Vamos usá-la para praticar e consumir APIs.</p>
+    <p>A URL da API é esta abaixo, onde o argumento 'results' representa a quantidade de resultados que queremos retornar:<br>
+    https://randomuser.me/api/?results=4</p>
+    <p>Verifique a documentação e exemplo de retorno em:<br>
+    Random User Generator | Documentation, ou faça uma chamada para a API (no navegador ou console) para verificar um exemplo de resultado.</p>
+    <p>Com base no json de retorno, monte uma página web, contendo os dados de usuários de sistema com foto, título, nome, sobrenome, e-mail e endereço completo.<br>
+    O layout (css) é livre, desde que apresente as informações solicitadas.</p>
+
+    <p>Dicas:<br><br>
+    a) Perceba que os resultados ficam dentro do campo 'results' do json de retorno;<br>
+    b) Para a foto, use a versão grande do campo 'picture': 'large' (grande);<br>
+    c) Para o nome, use os campos de 'name': 'title' (título), 'first' (nome), 'last' (sobrenome);<br>
+    d) Para o endereço, use os campos de 'location': 'street' (rua), 'city' (cidade), 'state' (estado), 'country' (país);<br>
+    e) Como é uma chamada remota para o serviço, o resultado pode demorar alguns segundos para retornar.</p>
+</body>
+</html>
