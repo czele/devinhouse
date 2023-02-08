@@ -1,9 +1,8 @@
 relogio = () => {
     const data = new Date();
     const horas = data.toLocaleTimeString()
-    const relogio = document.createElement('p')
+    const relogio = document.getElementById('aqui')
     relogio.innerText = horas;
-    document.body.appendChild(relogio);
 }
 
-setTimeout(relogio, 1000);
+setInterval(relogio, 1000);
