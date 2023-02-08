@@ -27,9 +27,9 @@ Promise.all([aprovacaoCadastro,aprovacaoValor])
     console.log('Aprovado')}
 )
 .catch(
-    (valores) => {
-        for(let i=0; valores < valores.length ;i++)
-        valores[i] === true;
+    (err) => {
+        for(let i=0; err < err.length ;i++)
+        err[i] === true;
         console.log('Reprovado')}
 )
 .finally(() => console.log('Fim do Processamento'))
