@@ -5,7 +5,8 @@ function obterClienteNoBancoDeDados(idCliente) {
     });
 }
 
-function processar() {
+//async function processar() {
+const processar = async () => {
     obterClienteNoBancoDeDados(7)
         .then(cliente => console.log(cliente));
 }
