@@ -7,8 +7,8 @@ function obterClienteNoBancoDeDados(idCliente) {
 
 //async function processar() {
 const processar = async () => {
-    obterClienteNoBancoDeDados(7)
-        .then(cliente => console.log(cliente));
+    const cliente = await obterClienteNoBancoDeDados(7)
+    console.log(cliente)
 }
 
 processar();
