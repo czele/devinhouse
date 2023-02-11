@@ -21,15 +21,8 @@ const aprovacaoCadastro = aprovarDadosCadastrais(cliente);
 const aprovacaoValor = aprovarValorSolicitado(cliente, 300.0);
 
 Promise.all([aprovacaoCadastro,aprovacaoValor])
-.then((valores) => {
-    for(let i=0; valores < valores.length ;i++)
-    valores[i] === true;
-    console.log('Aprovado')}
+.then(() => console.log('Aprovado')
 )
-.catch(
-    (err) => {
-        for(let i=0; err < err.length ;i++)
-        err[i] === true;
-        console.log('Reprovado')}
+.catch(() => console.log('Reprovado')
 )
 .finally(() => console.log('Fim do Processamento'))
