@@ -1,4 +1,4 @@
-const obterUsuarios = async (qtd = 4) => {
+/*const obterUsuarios = async (qtd = 4) => {
     const url = `https://randomuser.me/api/?results=4${qtd}`;
 
     try{
@@ -45,21 +45,43 @@ window.addEventListener('load', async () => {
     });
 })
 
-
+criarPessoa()*/
 
 /*const criarHtml = (res) => {
     document.createElement("p");
       p.innerText = res;
       document.body.appendChild(p);
-}
+}*/
+
 
 const criarPessoa = async() => {
-    const response = await fetch(BASE_URL)
+    
+    const criarSpan = (res) => {    
+        const p = document.createElement("p");
+        const span = document.getElementById("conteudo");
+        p.innerText = res;
+        span.appendChild(p);
+      }
 
-    const pessoa = await response.json()
-    console.log(pessoa);
-    const nome = pessoa.results[0].name.first
-    console.log(nome)
+    const pegarQtd = document.getElementById('form')
+    pegarQtd.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const qtd = event.target.qtd.value
+        
+        const BASE_URL = `https://randomuser.me/api/?results=${qtd}`;
+
+        const response = await fetch(BASE_URL)
+        const pessoa = await response.json()
+
+
+       /pessoa.results.forEach((x) => {
+            criarSpan(`Título:${x.titulo} Nome: ${x.nome} Sobrenome: ${x.sobrenome}`)
+            criarSpan(`Rua: ${x.rua} Número: ${x.numero} Estado: ${x.estado} Cidade: ${x.cidade} País: ${x.pais}`)
+        });
+        
+    })
+   
 }
 
-criarPessoa()*/
+criarPessoa();
+
