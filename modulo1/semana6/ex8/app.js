@@ -74,9 +74,11 @@ const criarPessoa = async() => {
         const pessoa = await response.json()
 
 
-       /pessoa.results.forEach((x) => {
-            criarSpan(`Título:${x.titulo} Nome: ${x.nome} Sobrenome: ${x.sobrenome}`)
-            criarSpan(`Rua: ${x.rua} Número: ${x.numero} Estado: ${x.estado} Cidade: ${x.cidade} País: ${x.pais}`)
+       pessoa.results.forEach((x) => {
+            criarSpan(`Título:${x.name.title} Nome: ${x.name.first} Sobrenome: ${x.name.last}`)
+            criarSpan(`Rua: ${x.location.street.name} Número: ${x.location.street.number} Estado: ${x.location.state} Cidade: ${x.location.city} País: ${x.location.country}`)
+            //createElement('hr')
+
         });
         
     })
