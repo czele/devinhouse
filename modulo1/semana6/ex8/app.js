@@ -73,11 +73,17 @@ const criarPessoa = async() => {
         const response = await fetch(BASE_URL)
         const pessoa = await response.json()
 
-
        pessoa.results.forEach((x) => {
-            criarSpan(`Título:${x.name.title} Nome: ${x.name.first} Sobrenome: ${x.name.last}`)
-            criarSpan(`Rua: ${x.location.street.name} Número: ${x.location.street.number} Estado: ${x.location.state} Cidade: ${x.location.city} País: ${x.location.country}`)
-            //createElement('hr')
+            const imagem = document.createElement("img")
+            const pegarHTML = document.getElementById("conteudo");
+            imagem.src = (x.picture.large)
+            pegarHTML.appendChild(imagem)
+
+            criarSpan(`Título:${x.name.title} \n Nome: ${x.name.first} \n Sobrenome: ${x.name.last}`)
+            criarSpan(`Rua: ${x.location.street.name} \n Número: ${x.location.street.number} \n Estado: ${x.location.state} \n Cidade: ${x.location.city} \n País: ${x.location.country}`)
+            
+            const risco = document.createElement("hr")
+            pegarHTML.appendChild(risco)
 
         });
         
