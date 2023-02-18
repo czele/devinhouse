@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-galeria',
@@ -6,5 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./galeria.component.css']
 })
 export class GaleriaComponent {
+
+   public title = 'Galeria de Images';
+   @Input() public fotos: string[ ] = [ ];
+  public fotoAtual = 0;
+
+  public voltarParaPrimeira () {
+    this.fotoAtual = this.primeira()
+  }
+
+  public vaiParaProxima() {
+    this.fotoAtual++;
+  }
+
+  public voltarParaAnterior(){
+    this.fotoAtual--;
+  }
+
+  public vaiParaUltima() {
+    this.fotoAtual = this.ultima();
+  }
+
+  public primeira() {
+    return 0;
+  }
+
+  public ultima() {
+    return this.fotos.length -1
+  }
 
 }
