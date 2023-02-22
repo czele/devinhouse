@@ -1,11 +1,11 @@
-<div class="jumbotron"> 
-  {{title}}
-  <div *ngIf="fotos.length>0">
+<div class="jumbotron">
+  <h2>{{title}}</h2>
+  <div class = "container" *ngIf="fotos.length>0">
     <img [src]="fotos[fotoAtual]">
       Foto {{fotoAtual +1 }} de {{fotos.length}}
       <button (click)="voltarParaPrimeira()" id="btnPrimeiro" type="button" class="btn btn-outline-primary"><<</button>
       <button (click)="voltarParaAnterior()" id="btnAnterior" type="button" class="btn btn-outline-primary"><</button>
-      <button (click)="vaiParaProxima()" id="btnProximo" type="button" class="btn btn-outline-primary">></button>
+      <button (click)="vaiParaProxima()" id="btnProximo" type="button" class="btn btn-outline-primary" [disabled]="!vaiParaProxima()">></button>
       <button (click)="vaiParaUltima()" id="btnUltimo" type="button" class="btn btn-outline-primary">>></button>
   </div>
 </div>

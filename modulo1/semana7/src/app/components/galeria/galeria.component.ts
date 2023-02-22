@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class GaleriaComponent {
 
-   public title = 'Galeria de Images';
-   @Input() public fotos: string[ ] = [ ];
+  public title = 'Galeria de Imagens';
+  @Input() public fotos: string[ ] = [ ];
   public fotoAtual = 0;
 
   public voltarParaPrimeira () {
@@ -16,7 +16,7 @@ export class GaleriaComponent {
   }
 
   public vaiParaProxima() {
-    this.fotoAtual++;
+    return this.fotoAtual++;
   }
 
   public voltarParaAnterior(){
