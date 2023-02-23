@@ -1,11 +1,10 @@
-<div class="jumbotron">
-  <h2>{{title}}</h2>
-  <div class = "container" *ngIf="fotos.length>0">
-    <img [src]="fotos[fotoAtual]">
-      Foto {{fotoAtual +1 }} de {{fotos.length}}
-      <button (click)="voltarParaPrimeira()" id="btnPrimeiro" type="button" class="btn btn-outline-primary"><<</button>
-      <button (click)="voltarParaAnterior()" id="btnAnterior" type="button" class="btn btn-outline-primary"><</button>
-      <button (click)="vaiParaProxima()" id="btnProximo" type="button" class="btn btn-outline-primary" [disabled]="!vaiParaProxima()">></button>
-      <button (click)="vaiParaUltima()" id="btnUltimo" type="button" class="btn btn-outline-primary">>></button>
-  </div>
+<h2>{{title}}</h2>
+<div class = "container" *ngIf="fotos.length>0">
+  <img [src]="fotos[fotoAtual]">
+    Foto {{fotoAtual +1 }} de {{fotos.length}}
+    <button (click)="voltarParaPrimeira()" type="button" class="btn btn-outline-primary"><<</button>
+    <button (click)="voltarParaAnterior()" type="button" class="btn btn-outline-primary" [disabled]="fotoAtual == 0 ? true : null"><</button>
+    <button (click)="vaiParaProxima()" type="button" class="btn btn-outline-primary" [disabled]="fotoAtual == fotos.length - 1 ? true : null">></button>
+    <button (click)="vaiParaUltima()" type="button" class="btn btn-outline-primary">>></button>
 </div>
+

@@ -11,12 +11,13 @@ export class GaleriaComponent {
   @Input() public fotos: string[ ] = [ ];
   public fotoAtual = 0;
 
+
   public voltarParaPrimeira () {
     this.fotoAtual = this.primeira()
   }
 
   public vaiParaProxima() {
-    return this.fotoAtual++;
+    this.fotoAtual++;
   }
 
   public voltarParaAnterior(){
