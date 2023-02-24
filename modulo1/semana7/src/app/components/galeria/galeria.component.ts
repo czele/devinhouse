@@ -8,6 +8,15 @@ import { Component, Input } from '@angular/core';
 export class GaleriaComponent {
 
   public title = 'Galeria de Imagens';
+
+  public legendaFotos: string[] = [
+    "Tux",
+    "Tux Patriota",
+    "Tux Jedi",
+    "Tux Rambo",
+    "Ubuntu"
+  ];
+
   @Input() public fotos: string[ ] = [ ];
   public fotoAtual = 0;
 

@@ -1,10 +1,11 @@
 <h2>{{title}}</h2>
 <div class = "container" *ngIf="fotos.length>0">
   <img [src]="fotos[fotoAtual]">
-    Foto {{fotoAtual +1 }} de {{fotos.length}}
-    <button (click)="voltarParaPrimeira()" type="button" class="btn btn-outline-primary"><<</button>
-    <button (click)="voltarParaAnterior()" type="button" class="btn btn-outline-primary" [disabled]="fotoAtual == 0 ? true : null"><</button>
-    <button (click)="vaiParaProxima()" type="button" class="btn btn-outline-primary" [disabled]="fotoAtual == fotos.length - 1 ? true : null">></button>
-    <button (click)="vaiParaUltima()" type="button" class="btn btn-outline-primary">>></button>
+    <p>{{ legendaFotos[fotoAtual] }}</p>
+      Foto {{fotoAtual +1 }} de {{fotos.length}}
+      <button (click)="voltarParaPrimeira()" type="button" class="btn btn-outline-primary"><<</button>
+      <button (click)="voltarParaAnterior()" type="button" class="btn btn-outline-primary" [disabled]="fotoAtual == 0 ? true : null"><</button>
+      <button (click)="vaiParaProxima()" type="button" class="btn btn-outline-primary" [disabled]="fotoAtual == fotos.length - 1 ? true : null">></button>
+      <button (click)="vaiParaUltima()" type="button" class="btn btn-outline-primary">>></button>
 </div>
 
