@@ -1,3 +1,23 @@
-<p>{{ getInfoPersonagem1 }}</p>
-<p>{{ getInfoPersonagem2 }}</p>
-<p>{{ getInfoServicePersonagem2() }}</p>
+<button type="button" class="btn btn-primary">Primary</button>
+
+
+<table>
+  <thead>
+    <td></td>
+    <td>Id</td>
+    <td>Nome</td>
+    <td>Habilidade</td>
+    <td>Planeta</td>
+    <td>Armas</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let personagem of personagens">
+      <td><img [src]="personagem.avatar"></td>
+      <td>{{ personagem.id }}</td>
+      <td>{{ personagem.nome }}</td>
+      <td>{{ personagem.habilidade }}</td>
+      <td>{{ personagem.planeta }}</td>
+      <td>{{ personagem.armas }}</td>
+    </tr>
+  </tbody>
+</table>
