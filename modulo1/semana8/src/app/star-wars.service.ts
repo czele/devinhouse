@@ -1,19 +1,18 @@
-import { Personagem } from './components/star-wars/personagem';
+import { PersonagemClass } from './components/star-wars/personagem-class';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { API_PATH } from './components/star-wars/enviroments/enviroments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StarWarsServiceService {
 
-  private url = 'http://localhost:3000/personagens';
-
   constructor(private _httpClient: HttpClient) {}
 
-  public getPersonagens(): Observable<Personagem[]> {
-    return this._httpClient.get<Personagem[]>(this.url);
+  public getPersonagens(): Observable<PersonagemClass[]> {
+    return this._httpClient.get<PersonagemClass[]>(`${API_PATH}`);
   }
 
 }

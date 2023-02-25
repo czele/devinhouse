@@ -1,4 +1,4 @@
-import { Personagem } from './personagem';
+import { PersonagemClass } from './personagem-class';
 import { StarWarsServiceService } from '../../star-wars.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,21 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarWarsComponent implements OnInit {
 
-  public personagens: Personagem[] = [];
+  public personagens: PersonagemClass[] = [];
 
   constructor (private _service: StarWarsServiceService) {}
 
   ngOnInit(): void {
     
-    this._service.getPersonagens().subscribe(
-      res => {this.personagens = res.map(func => { 
-        return new Personagem(
-          func.id, 
-          func.nome, 
-          func.habilidade, 
-          func.planeta, 
-          func.armas, 
-          func.avatar)})}
-    )
+    this._service.getPersonagens().subscribe(res => {this.personagens = res})
+    
   }
 }
+

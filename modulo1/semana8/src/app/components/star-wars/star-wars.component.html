@@ -1,23 +1,19 @@
-<button type="button" class="btn btn-primary">Primary</button>
-
-
-<table>
-  <thead>
-    <td></td>
-    <td>Id</td>
-    <td>Nome</td>
-    <td>Habilidade</td>
-    <td>Planeta</td>
-    <td>Armas</td>
-  </thead>
-  <tbody>
-    <tr *ngFor="let personagem of personagens">
-      <td><img [src]="personagem.avatar"></td>
-      <td>{{ personagem.id }}</td>
-      <td>{{ personagem.nome }}</td>
-      <td>{{ personagem.habilidade }}</td>
-      <td>{{ personagem.planeta }}</td>
-      <td>{{ personagem.armas }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="container">
+  <span *ngFor="let x of personagens">
+      <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img [src]="x.avatar" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{x.nome}}</h5>
+                <p class="card-text">{{x.habilidade}}</p>
+                <p class="card-text"><small class="text-muted">Planeta de origem: {{x.planeta}}</small></p>
+                <p class="card-text"><small class="text-muted">Armas: {{x.armas}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </span>
+</div>

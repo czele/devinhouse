@@ -21,7 +21,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   providers: [],
   bootstrap: [
     AppComponent,
-    StarWarsComponent
   ]
 })
 export class AppModule { }
