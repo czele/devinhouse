@@ -1,7 +1,7 @@
 <h1>Mad Men</h1>
 
 <div class="container">
-    <div *ngFor="let temporada of temporadas" class="card text-center mb-3 mb-3" style="width: 18rem;">
+    <div *ngFor="let temporada of temporadas" class="card text-center mb-3 mb-3" style="width: 18rem;" [routerLink]="'/episodios/'+ temporada.nomeSerie + '/' + temporada.id">
     <img src="{{ temporada.tumbnail }}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{ temporada.numeroTemporada }}</h5>
