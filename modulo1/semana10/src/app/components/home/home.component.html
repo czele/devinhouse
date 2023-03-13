@@ -1,6 +1,13 @@
-<div><a routerLink="/home">Home</a></div>
-<div><a routerLink="cadastrar">cadastrar</a></div>
-<div><a routerLink="faq">faq</a></div>
-<div><a routerLink="conta">conta</a></div>
-<div><a routerLink="/login">sair</a></div>
+<nav class="navbar bg-dark" data-bs-theme="dark">
+    <nav class="navbar bg-body-tertiary">
+        <form id="botoes" class="container-fluid justify-content-end">
+          <button class="btn btn-sm btn-outline-secondary" routerLink="/home" type="button">Home</button>
+          <button class="btn btn-sm btn-outline-secondary" routerLink="cadastrar" type="button">Cadastrar Produto</button>
+          <button class="btn btn-sm btn-outline-secondary" routerLink="faq" type="button">FAQ</button>
+          <button class="btn btn-sm btn-outline-secondary" routerLink="conta" type="button">Conta</button>
+          <button class="btn btn-sm btn-outline-secondary" routerLink="/login" type="button">Sair</button>
+        </form>
+      </nav>
+</nav>
+
 <router-outlet></router-outlet>
