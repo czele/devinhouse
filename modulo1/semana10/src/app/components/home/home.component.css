@@ -1,3 +1,12 @@
 #botoes {
     gap: 5px;
 }
+
+#tabela {
+    width: calc(75%);
+}
+
+#titulo {
+    text-align: center;
+    margin-top: 40px;
+}
