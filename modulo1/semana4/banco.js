@@ -57,10 +57,7 @@ formulario.addEventListener('submit', enviarFormulario);
 const formOperacao = document.getElementById('formconta');
 
 const sacar = (conta, valor) => {
-    //Verifica se o valor é maior que 0
     if(valor > 0) {
-        //Verifica se tem saldo disponível
-        //Saque realizado
         if(conta.saldo >= valor) {
             const novoSaldo = conta.saldo - valor
             conta.saldo = novoSaldo;

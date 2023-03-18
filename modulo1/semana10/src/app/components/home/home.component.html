@@ -5,7 +5,11 @@
           <button class="btn btn-sm btn-outline-secondary" routerLink="cadastrar" type="button">Cadastrar Produto</button>
           <button class="btn btn-sm btn-outline-secondary" routerLink="faq" type="button">FAQ</button>
           <button class="btn btn-sm btn-outline-secondary" routerLink="conta" type="button">Conta</button>
+<<<<<<< HEAD
           <button class="btn btn-sm btn-outline-secondary" routerLink="/login" type="button" *ngIf="">Sair</button>
+=======
+          <button class="btn btn-sm btn-outline-secondary" routerLink="/login" type="button" (click)="limparLocal()">Sair</button>
+>>>>>>> 51de4f7858c3f79ba926c6abe752b2e5e69a9e93
         </form>
       </nav>
 </nav>
@@ -28,7 +32,7 @@
             <th scope="row">{{produto.quantidade}}</th>
             <th scope="row">{{produto.preco}}</th>
         </tr>
-    </tbody>  
+    </tbody>
 </table>
 
 <router-outlet></router-outlet>
