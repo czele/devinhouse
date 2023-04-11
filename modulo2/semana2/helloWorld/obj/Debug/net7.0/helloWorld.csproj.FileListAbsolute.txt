@@ -1,0 +1,15 @@
+C:\repo\devinhouse\modulo2\semana2\helloWorld\bin\Debug\net7.0\helloWorld.exe
+C:\repo\devinhouse\modulo2\semana2\helloWorld\bin\Debug\net7.0\helloWorld.deps.json
+C:\repo\devinhouse\modulo2\semana2\helloWorld\bin\Debug\net7.0\helloWorld.runtimeconfig.json
+C:\repo\devinhouse\modulo2\semana2\helloWorld\bin\Debug\net7.0\helloWorld.dll
+C:\repo\devinhouse\modulo2\semana2\helloWorld\bin\Debug\net7.0\helloWorld.pdb
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\helloWorld.csproj.AssemblyReference.cache
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\helloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\helloWorld.AssemblyInfoInputs.cache
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\helloWorld.AssemblyInfo.cs
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\helloWorld.csproj.CoreCompileInputs.cache
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\helloWorld.dll
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\refint\helloWorld.dll
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\helloWorld.pdb
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\helloWorld.genruntimeconfig.cache
+C:\repo\devinhouse\modulo2\semana2\helloWorld\obj\Debug\net7.0\ref\helloWorld.dll
