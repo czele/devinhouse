@@ -1,0 +1,15 @@
+C:\repo\devinhouse\modulo2\semana2\ex2\bin\Debug\net7.0\ex2.exe
+C:\repo\devinhouse\modulo2\semana2\ex2\bin\Debug\net7.0\ex2.deps.json
+C:\repo\devinhouse\modulo2\semana2\ex2\bin\Debug\net7.0\ex2.runtimeconfig.json
+C:\repo\devinhouse\modulo2\semana2\ex2\bin\Debug\net7.0\ex2.dll
+C:\repo\devinhouse\modulo2\semana2\ex2\bin\Debug\net7.0\ex2.pdb
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ex2.csproj.AssemblyReference.cache
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ex2.GeneratedMSBuildEditorConfig.editorconfig
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ex2.AssemblyInfoInputs.cache
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ex2.AssemblyInfo.cs
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ex2.csproj.CoreCompileInputs.cache
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ex2.dll
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\refint\ex2.dll
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ex2.pdb
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ex2.genruntimeconfig.cache
+C:\repo\devinhouse\modulo2\semana2\ex2\obj\Debug\net7.0\ref\ex2.dll
