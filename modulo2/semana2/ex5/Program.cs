@@ -15,8 +15,7 @@ internal class Program
 
         foreach (var item in numeros)
         {
-            Console.Write($"{item} - ");
+            Console.Write($"{item} ");
         }
-
     }
 }
