@@ -10,6 +10,11 @@
             numeros[i] = Convert.ToInt32(Console.ReadLine());  
         
         }
+
+        /* Para printar um array tem que sempre ser dentro de um foreach
+        foreach (var item in numeros) {
+            Console.Write(item);
+        }*/
         
         Console.WriteLine(numeros.Max());
 
