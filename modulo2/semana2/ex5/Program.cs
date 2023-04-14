@@ -3,13 +3,19 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int[] numeros = {};
+        int[] numeros = new int[4];
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < numeros.Length; i++)
         {
             Console.Write("Digite um número inteiro: ");
-            //int numeros = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine($"{numeros}");
+            numeros[i] = Convert.ToInt32(Console.ReadLine());  
+        }
+
+        Array.Sort(numeros);
+
+        foreach (var item in numeros)
+        {
+            Console.Write($"{item} - ");
         }
 
     }

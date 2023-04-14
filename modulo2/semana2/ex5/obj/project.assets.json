@@ -8,7 +8,7 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\zelenc\\.nuget\\packages\\": {}
+    "C:\\Users\\Camila\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "C:\\repo\\devinhouse\\modulo2\\semana2\\ex5\\ex5.csproj",
       "projectName": "ex5",
       "projectPath": "C:\\repo\\devinhouse\\modulo2\\semana2\\ex5\\ex5.csproj",
-      "packagesPath": "C:\\Users\\zelenc\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Camila\\.nuget\\packages\\",
       "outputPath": "C:\\repo\\devinhouse\\modulo2\\semana2\\ex5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\zelenc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Camila\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
