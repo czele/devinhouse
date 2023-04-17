@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\repo\\devinhouse\\modulo2\\semana2\\ex9\\ex9.csproj",
         "projectName": "ex9",
         "projectPath": "C:\\repo\\devinhouse\\modulo2\\semana2\\ex9\\ex9.csproj",
-        "packagesPath": "C:\\Users\\Camila\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\zelenc\\.nuget\\packages\\",
         "outputPath": "C:\\repo\\devinhouse\\modulo2\\semana2\\ex9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Camila\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\zelenc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
