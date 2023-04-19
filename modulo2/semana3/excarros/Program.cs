@@ -1,6 +1,8 @@
 ﻿//Tem que ser o nome do projeto para pegar as classes
 using excarros;
 
+List<Carro>carros = new List<Carro>();
+
 Proprietario proprietario1 = new Proprietario(){
     nome="João",
     cpf=79240792031,
@@ -42,3 +44,7 @@ Carro carro3 = new Carro(){
     cor="chumbo",
     proprietario=proprietario3
 };
+
+carros.Add(carro1);
+carros.Add(carro2);
+carros.Add(carro3);
