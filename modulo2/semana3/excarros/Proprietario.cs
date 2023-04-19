@@ -8,8 +8,9 @@ namespace excarros
 {
     public class Proprietario
     {
-        public string nome {get; set;}
-        public long cpf {get; set;}
-        public long telefone {get; set;}
+        public string nome { get; set; }
+        public long cpf { get; set; }
+        public long telefone { get; set; }
+        
     }
 }
