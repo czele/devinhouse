@@ -8,9 +8,20 @@ namespace excarros
 {
     public class Proprietario
     {
-        public string nome { get; set; }
-        public long cpf { get; set; }
-        public long telefone { get; set; }
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string Telefone { get; set; }
+
+        public Proprietario(string nome, string cpf, string telefone)
+        {
+            Nome = nome;
+            Cpf = cpf;
+            Telefone = telefone;
+        }
+
+        public string Imprimir() {
+            return $"Nome: {Nome}  CPF: {Cpf}  Telefone: {Telefone}" ;           
+        }
         
     }
 }
