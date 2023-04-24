@@ -23,7 +23,7 @@ namespace excarros
         }
 
         public string Imprimir() {
-            return $"Marca: {Marca}  Modelo: {Modelo}  Placa: {Placa}  Cor: {Cor}  Proprietário: {Proprietario}" ;           
+            return $"Marca: {Marca}  Modelo: {Modelo}  Placa: {Placa}  Cor: {Cor}  Proprietário: {Proprietario.Imprimir()}" ;           
         }
 
     }
