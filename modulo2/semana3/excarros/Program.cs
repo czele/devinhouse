@@ -15,6 +15,9 @@ Proprietario proprietario3 = new Proprietario("Camila", "94420517093", "98068645
 
 Carro carro1 = new Carro("Volksvagen", "Up!", "MUH8803", "vermelho", proprietario1);
 
+Console.WriteLine("Bem-vindo ao sistema de cadastro de carros. Digite uma opção: 1 - Cadastrar Carros / 2 - Consultar Carror / 3 - Sair");
+int opcao = Convert.ToInt16(Console.ReadLine());
+
     void cadastraCarros(){
 
             Console.Write("Marca:");
@@ -49,12 +52,33 @@ carros.Add(carro1);
 carros.Add(new Carro("Honda", "FIT", "HPY8945", "cinza", proprietario2));
 carros.Add(new Carro("Chevrolet", "Spin", "MND0561", "chumbo", proprietario3));
 
-cadastraCarros();
 
-foreach(var carro in carros)
+switch (opcao)
+{
+  case 1: 
+    cadastraCarros();
+    foreach(var carro in carros)
     {
         Console.WriteLine(carro.Imprimir());
-    };
+    }
+    break;
+  case 2: 
+    foreach(var carro in carros)
+    {
+        Console.WriteLine(carro.Imprimir());
+    }
+    break;
+  case 3:
+    Console.WriteLine("Obrigada por utilizar o sistema.");
+  break; 
+  default:
+    do 
+    {Console.WriteLine("Opção incorreta. Você deve sair da aplicação (3): ");
+    opcao = Convert.ToInt16(Console.ReadLine());
+    Console.WriteLine("Obrigada por utilizar o sistema.");}
+    while (opcao != 3);
+  break;
+}
 
 
 //Exemplos de Funções anônimas
