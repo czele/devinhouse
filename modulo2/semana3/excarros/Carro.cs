@@ -13,6 +13,7 @@ namespace excarros
         public string Cor{ get; set; }
         public Proprietario Proprietario { get; set; }
 
+        public Carro() {}
         public Carro(string marca, string modelo, string placa, string cor, Proprietario proprietario)
         {
             Marca = marca;

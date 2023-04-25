@@ -12,6 +12,7 @@ namespace excarros
         public string Cpf { get; set; }
         public string Telefone { get; set; }
 
+        public Proprietario() {}
         public Proprietario(string nome, string cpf, string telefone)
         {
             Nome = nome;
