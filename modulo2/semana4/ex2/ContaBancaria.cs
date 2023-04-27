@@ -8,21 +8,24 @@ namespace ex2
     public class ContaBancaria
     {
         private String NumeroConta { get; set; }
-        private int Saldo { get; set; }
+        private decimal _saldo { get; set; }
    
+
+        public ContaBancaria() { }
 
         public ContaBancaria(String numeroConta, int saldo)
         {
             NumeroConta = numeroConta;
-            Saldo = saldo;
+            _saldo = saldo;
         }
 
-        public int getSaldo() {
-            return Saldo;
+        public void deposita(decimal value) {
+            _saldo += value;
         }
 
-        public void setSaldo() {
-
+        public void saca(decimal value) {
+            _saldo -= value;
         }
+
     }
 }
