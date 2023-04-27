@@ -8,8 +8,8 @@ namespace ex1
     public class Pessoa
     {
         private String _nome;
-        protected int Idade { get; set; }
-        public String Endereco { get; set; }
+        protected int idade { get; set; }
+        public String endereco { get; set; }
 
         public Pessoa()
         {
@@ -19,11 +19,11 @@ namespace ex1
         public Pessoa(String nome, int idade)
         {
             _nome = nome;
-            idade = Idade;
+            this.idade = idade;
         }
 
         public void saudacao() {
-            Console.WriteLine($"Olá, meu nome é {_nome} e eu tenho {Idade} anos");
+            Console.WriteLine($"Olá, meu nome é {_nome} e eu tenho {idade} anos");
         }
 
     }
