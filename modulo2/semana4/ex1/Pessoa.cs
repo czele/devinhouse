@@ -7,7 +7,7 @@ namespace ex1
 {
     public class Pessoa
     {
-        private String _nome;
+        private String Nome;
         protected int Idade { get; set; }
         public String Endereco { get; set; }
 
@@ -18,13 +18,14 @@ namespace ex1
 
         public Pessoa(String nome, int idade)
         {
-            _nome = nome;
-            idade = Idade;
+            Nome = nome;
+            Idade = idade;
         }
 
         public void saudacao() {
-            Console.WriteLine($"Olá, meu nome é {_nome} e eu tenho {Idade} anos");
+            Console.WriteLine($"Olá, meu nome é {Nome} e eu tenho {Idade} anos");
         }
-
+  
     }
+
 }
