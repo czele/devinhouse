@@ -33,8 +33,8 @@ namespace ex2
             Console.WriteLine(_saldo);
         }
 
-        public void getSaldo() {
-            Console.WriteLine(_saldo);
+        public decimal getSaldo() {
+            return _saldo;
         }
 
     }

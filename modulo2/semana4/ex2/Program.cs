@@ -6,8 +6,8 @@ internal class Program
     {
         ContaBancaria conta1 = new ContaBancaria("123", 200);
 
-        conta1.deposita(200);
-        conta1.saca(500);
-        conta1.getSaldo();
+        // conta1.deposita(200);
+        // conta1.saca(500);
+        Console.WriteLine(conta1.getSaldo());
     }
 }
