@@ -24,7 +24,15 @@ namespace ex2
         }
 
         public void saca(decimal value) {
+            if(value > _saldo) {
+                Console.Write("Saldo insuficiente");
+                return;
+            }
             _saldo -= value;
+        }
+
+        public void getSaldo() {
+            Console.WriteLine(_saldo);
         }
 
     }
