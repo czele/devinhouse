@@ -21,14 +21,16 @@ namespace ex2
 
         public void deposita(decimal value) {
             _saldo += value;
+            Console.WriteLine(_saldo);
         }
 
         public void saca(decimal value) {
             if(value > _saldo) {
-                Console.Write("Saldo insuficiente");
+                Console.WriteLine("Saldo insuficiente");
                 return;
             }
             _saldo -= value;
+            Console.WriteLine(_saldo);
         }
 
         public void getSaldo() {
