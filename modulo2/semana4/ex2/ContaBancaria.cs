@@ -7,7 +7,7 @@ namespace ex2
 {
     public class ContaBancaria
     {
-        private String NumeroConta { get; set; }
+        private String numeroConta { get; set; }
         private decimal _saldo { get; set; }
    
 
@@ -15,7 +15,7 @@ namespace ex2
 
         public ContaBancaria(String numeroConta, int saldo)
         {
-            NumeroConta = numeroConta;
+            this.numeroConta = numeroConta;
             _saldo = saldo;
         }
 
