@@ -5,17 +5,21 @@ using System.Threading.Tasks;
 
 namespace ex3
 {
-    public class contaBancaria
+    public class ContaBancaria : Cliente
     {
-        private String numero;
-        private Cliente cliente;
+        private String numero { get; set; }
+        private Cliente cliente { get; set; }
 
-        public contaBancaria() { }
+        public ContaBancaria() { }
 
-        public contaBancaria(String numero, Cliente cliente)
+        public ContaBancaria(String numero, Cliente cliente)
         {
             this.numero = numero;
             this.cliente= cliente;;
+        }
+
+        public void contaBancaria() {
+            Console.WriteLine($"Número: {numero}, nome: {nome}, cpf: {cpf}");
         }
     }
 }

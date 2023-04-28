@@ -7,22 +7,21 @@ namespace ex3
 {
     public class Banco
     {
-        private decimal _saldo;
-    }
-     
-    public Banco() { }
+        private decimal _saldo { get; set; }
+    
+        public Banco() { }
 
-    public Banco(decimal saldo)
-    {
-        _saldo = saldo;
-    }
-
-    public void deposita(decimal value) {
-            _saldo += value;
-            Console.WriteLine(_saldo);
+        public Banco(decimal saldo)
+        {
+            _saldo = saldo;
         }
 
-        public void saca(decimal value) {
+        public void depositar(decimal value) {
+                _saldo += value;
+                Console.WriteLine(_saldo);
+            }
+
+        public void sacar(decimal value) {
             if(value > _saldo) {
                 Console.WriteLine("Saldo insuficiente");
                 return;
@@ -30,4 +29,10 @@ namespace ex3
             _saldo -= value;
             Console.WriteLine(_saldo);
         }
+
+        //O override só é usado em String, para sobreescrever
+        public override String toString() {
+            Console.WriteLine($"{_saldo}");
+        }
+    }
 }

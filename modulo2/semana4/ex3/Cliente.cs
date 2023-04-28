@@ -7,8 +7,8 @@ namespace ex3
 {
     public class Cliente
     {
-        private String nome;
-        private String cpf;
+        private String nome { get; set; }
+        private String cpf { get; set; }
 
         public Cliente() { }
 
@@ -16,6 +16,10 @@ namespace ex3
             this.nome = nome;
             this.cpf = cpf;
         }
-            
+
+        public String toString() {
+            Console.WriteLine($"Nome: {nome}. CPF: {cpf}");
+        }
+   
     }
 }
