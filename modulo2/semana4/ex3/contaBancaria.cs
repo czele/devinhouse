@@ -9,17 +9,33 @@ namespace ex3
     {
         private String numero { get; set; }
         private Cliente cliente { get; set; }
+        private Banco banco;
 
         public ContaBancaria() { }
 
-        public ContaBancaria(String numero, Cliente cliente)
+        public ContaBancaria(String numero, Cliente cliente, Banco banco)
         {
             this.numero = numero;
-            this.cliente= cliente;;
+            this.cliente = cliente;
+            this.banco = banco;
+        }
+        
+        public void depositar(decimal valor) {
+            banco.depositar(valor);
+        }
+        public void sacar(decimal valor) {
+            banco.sacar(valor);
         }
 
-        public void contaBancaria() {
-            Console.WriteLine($"Número: {numero}, nome: {nome}, cpf: {cpf}");
+        public void exibirDados() {
+            Console.WriteLine("Conta" + numero);
+            Console.WriteLine(cliente.ToString());
         }
+
+        public override string ToString()
+        {
+            return "Conta " + numero + " " + cliente.ToString() + " " + banco.ToString();
+        }
+
     }
 }

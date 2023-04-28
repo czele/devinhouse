@@ -31,8 +31,8 @@ namespace ex3
         }
 
         //O override só é usado em String, para sobreescrever
-        public override String toString() {
-            Console.WriteLine($"{_saldo}");
+        public override String ToString() {
+            return "Saldo " + _saldo;
         }
     }
 }

@@ -17,8 +17,8 @@ namespace ex3
             this.cpf = cpf;
         }
 
-        public String toString() {
-            Console.WriteLine($"Nome: {nome}. CPF: {cpf}");
+        public override String ToString() {
+            return "Nome: "  + nome + "CPF: " + cpf;
         }
    
     }
