@@ -4,6 +4,10 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Cachorro cachorro = new Cachorro();
+        cachorro.EmitirSom();
+
+        Gato gato = new Gato();
+        gato.EmitirSom();
     }
 }
