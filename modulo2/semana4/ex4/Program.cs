@@ -4,7 +4,7 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        ContaBancaria conta = new ContaBancaria(500);
+        ContaBancaria conta = new(500);
 
         conta.Depositar(100);
         Console.WriteLine(conta.Saldo);

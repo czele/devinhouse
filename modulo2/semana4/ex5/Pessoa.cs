@@ -11,15 +11,18 @@ namespace ex5
         private int idade;
 
         public Pessoa() { }
-
-        public Pessoa(String nome, int idade)
-        {
+        
+        public void DefinirNome(String nome) {
             this.nome = nome;
-            this.idade = idade;
         }
 
-        public definirIdade() {
-            
+        public void DefinirIdade(int idade) {
+            if(idade>0) {
+                this.idade = idade;
+                Console.WriteLine($"Idade positiva de {idade}");
+            } else {
+                Console.WriteLine("Idade negativa");
+            }   
         }
     }
 }
