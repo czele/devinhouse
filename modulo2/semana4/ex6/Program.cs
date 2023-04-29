@@ -4,6 +4,11 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Retangulo retangulo1 = new Retangulo(10, 20);
+        retangulo1.CalcularArea();
+
+        Retangulo retangulo2 = new Retangulo(-10, 20);
+        retangulo2.CalcularArea();
+        
     }
 }
