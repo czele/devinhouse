@@ -11,9 +11,15 @@ namespace ex5
         private int idade;
 
         public Pessoa() { }
-        
-        public void DefinirNome(String nome) {
-            this.nome = nome;
+
+        public String Nome {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public int Idade {
+            get { return idade; }
+            set { idade = value; }
         }
 
         public void DefinirIdade(int idade) {
