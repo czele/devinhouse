@@ -1,7 +1,15 @@
-﻿internal partial class Program
+﻿using ex4;
+
+internal partial class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        ContaBancaria conta = new ContaBancaria(500);
+
+        conta.Depositar(100);
+        Console.WriteLine(conta.Saldo);
+
+        conta.Sacar(50);
+        Console.WriteLine(conta.Saldo);
     }
 }
