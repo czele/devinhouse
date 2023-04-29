@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace ex8
 {
-    public class Animal
+    public abstract class Animal
     {
-        
+            
     }
 }

@@ -11,5 +11,7 @@ internal partial class Program
 
         conta.Sacar(50);
         Console.WriteLine(conta.Saldo);
+
+        conta.Sacar(600);
     }
 }

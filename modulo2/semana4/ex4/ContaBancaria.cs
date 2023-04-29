@@ -7,27 +7,32 @@ namespace ex4
 {
     public class ContaBancaria
     {
-        public decimal Saldo { get; private set; }
+        private decimal saldo;
 
         public ContaBancaria() { }
 
         public ContaBancaria(decimal saldo)
         {
-            this.Saldo = saldo;
+            this.saldo = saldo;
+        }
+
+        public decimal Saldo {
+            get { return saldo; }
+            set { saldo = value >=0 ? value : 0; }
         }
 
         public decimal Depositar(decimal valor) {
-            return Saldo += valor;
+            return saldo += valor;
         }
 
         public bool Sacar(decimal valor) {
-            if(valor > Saldo) {
-                Console.WriteLine("Pobre. Saldo insuficiente");
-                return false;
+            if(valor >= saldo && valor >= 0) {
+                saldo -= valor;
+                return true;
             }
             else {
-                Saldo -= valor;
-                return true;
+                Console.WriteLine("Pobre. Saldo insuficiente");
+                return false;
             }
         }
         
