@@ -8,7 +8,7 @@ namespace ex7
     public class ContaBancaria
     {
         public String NumeroConta { get; set; }
-        public const decimal Saldo = 1000;
+        public const decimal SaldoMaximo = 1000;
 
         public ContaBancaria() { }
 
@@ -18,7 +18,7 @@ namespace ex7
         }
 
         public void Depositar(decimal valor) {
-            if(valor > 0 && valor < Saldo) {
+            if(valor > 0 && valor < SaldoMaximo) {
                 System.Console.WriteLine("Depósito permitido");
             } else {
                 System.Console.WriteLine("Depósito negado");
