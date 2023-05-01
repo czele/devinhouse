@@ -12,6 +12,8 @@ namespace ex9
         public static float Raio { get; set; }
         public const double Pi = 3.14159265359;
 
+        //Classes static não tem construtor pq a classe não é instanciada.
+
         public static void Soma(float NumA, float NumB) {
             Console.WriteLine($"Soma: {NumA + NumB}");
         }
