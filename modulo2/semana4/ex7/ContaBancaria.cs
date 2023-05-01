@@ -26,7 +26,7 @@ namespace ex7
         }
 
         public void Sacar(decimal valor) {
-            if(valor < Saldo) {
+            if(valor < SaldoMaximo) {
                 System.Console.WriteLine("Saque permitido");
             } else {
                 System.Console.WriteLine("Saque negado");
