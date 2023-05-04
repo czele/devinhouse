@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace semana5
+namespace semana5.Model
 {
     public abstract class Cliente
     {
