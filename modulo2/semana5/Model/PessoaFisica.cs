@@ -1,27 +1,27 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace semana5.Model
 {
     public class PessoaFisica : Cliente
     {
-        public int AnoNascimento { get; set; }
+        public String Nome { get; set; }
+        public DateTime DataNascimento { get; set; }
         public String Cpf { get; set; }
 
         public PessoaFisica() {}
        
-        public PessoaFisica(int anoNascimento, String cpf)
+        public PessoaFisica(int numeroConta, String endereco, String telefone, String nome, String cpf, DateTime dataNascimento) 
+                            : base (numeroConta, endereco, telefone)
         {
-            anoNascimento = AnoNascimento;
-            cpf = Cpf;
+            Nome = nome;
+            DataNascimento = dataNascimento;
+            Cpf = cpf;
         }
 
-        public bool EhMaior(int anoNascimento) {
-            if (anoNascimento - 2023 >= 18) {
-                return true;
-            } return false;
+        public bool EhMaior() {
+            int idade = DateTime.Now.Year - DataNascimento.Year;
+            if (!(DateTime.Now.Month >= DataNascimento.Month && DateTime.Now.Day >= DataNascimento.Day)){
+                idade --;
+            }
+            return idade >= 18;
         }
     }
 }

@@ -1,29 +1,24 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace semana5.Model
 {
     public abstract class Cliente
     {
-       public String Nome { get; set; }
-       public String NumeroConta { get; set; }
+       public int NumeroConta { get; set; }
        public String Endereco { get; set; }
+       public String Telefone { get; set; }
        public decimal Saldo { get; set; }
 
         public Cliente() { }
 
-        public Cliente(String nome, String numeroConta, String endereco, decimal saldo)
+        public Cliente(int numeroConta, String endereco, String telefone)
         {
-            Nome = nome;
             NumeroConta = numeroConta;
             Endereco = endereco;
-            Saldo = saldo;
+            Telefone = telefone;
+            Saldo = 0;
         }
 
-        public void ResumoCliente() {
-            Console.Write($"Nome: {Nome} - Numero da Conta: {NumeroConta} - Endereço: {Endereco} - Saldo: {Saldo}");
+        public String ResumoCliente() {
+           return $"Numero da Conta: {NumeroConta} | End: {Endereco} | Tel: {Telefone} | Saldo: {Saldo}";
         }
        
     }

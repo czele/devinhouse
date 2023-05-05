@@ -12,12 +12,12 @@ namespace semana5.Model
 
         public PessoaJuridica() { }
 
-        public PessoaJuridica(long cnpj, String razaoSocial)
+        public PessoaJuridica(int numeroConta, String endereco, String telefone, long cnpj, String razaoSocial)
+                            : base (numeroConta, endereco, telefone)
         {
             cnpj = Cnpj;
             razaoSocial = RazaoSocial;
         }
 
-        
     }
 }
