@@ -23,5 +23,9 @@ namespace semana5.Model
             }
             return idade >= 18;
         }
+
+        public String ResumoPessoaFisica() {
+            return $" Nome: {Nome} | Data de Nascimento {DataNascimento} | CPF: {Cpf}";
+        }
     }
 }

@@ -14,5 +14,8 @@ namespace semana5.Model
             razaoSocial = RazaoSocial;
         }
 
+        public String ResumoJuridica() {
+            return $" CNPJ: {Cnpj} | Razão Social: {RazaoSocial}";
+        }
     }
 }
