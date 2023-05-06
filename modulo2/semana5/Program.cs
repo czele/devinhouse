@@ -13,6 +13,8 @@ internal class Program
             Console.WriteLine("2 - Consultar Conta");
             Console.WriteLine("3 - Listar Todas as contas");
             Console.WriteLine("4 - Sair\n");
+            Console.WriteLine("5 - Adicionar Transação");
+            Console.WriteLine("3 - Exibir Extrato");
             opcao = Console.ReadLine();
             SelecaoMenu(opcao);
         } while (opcao != "4");       
@@ -20,6 +22,7 @@ internal class Program
 
         void SelecaoMenu(String opcao) {
             IClienteService clienteService = new ClienteService();
+            ITransacaoService transacaoService = new TransacaoService();
             switch(opcao) {
             case "1":
                 clienteService.CriarConta();
@@ -38,6 +41,12 @@ internal class Program
                 break;
             case "4":
                 break;
+            case "5":
+                transacaoService.AdicionaTransacao();
+                break;
+            case "6":
+                transacaoService.ExibirExtrato();
+                break;            
             default:
                 Console.WriteLine("Opção inválida");
                 break;

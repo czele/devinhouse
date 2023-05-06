@@ -6,10 +6,13 @@ namespace semana5.Model
        public String Endereco { get; set; }
        public String Telefone { get; set; }
        public decimal Saldo { get; set; }
+       public List<Transacao> Extrato { get; set; }
 
-        public Cliente() { }
+        public Cliente() { 
+            Extrato = new List<Transacao>();
+        }
 
-        public Cliente(int numeroConta, String endereco, String telefone)
+        public Cliente(int numeroConta, String endereco, String telefone) : this()
         {
             NumeroConta = numeroConta;
             Endereco = endereco;
