@@ -1,8 +1,9 @@
 using semana5.Model;
+using semana5.Interface;
 
 namespace semana5.Service
 {
-    public class ClienteService
+    public class ClienteService : IClienteService
     {
         private static List<Cliente> _clientes = new List<Cliente>();
 
