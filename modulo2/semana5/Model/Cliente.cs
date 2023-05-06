@@ -17,7 +17,7 @@ namespace semana5.Model
             Saldo = 0;
         }
 
-        public String ResumoCliente() {
+        public virtual String ResumoCliente() {
            return $"Numero da Conta: {NumeroConta} | End: {Endereco} | Tel: {Telefone} | Saldo: {Saldo.ToString("C2")} |";
         }
        

@@ -25,7 +25,12 @@ namespace semana5.Model
         }
 
         public String ResumoPessoaFisica() {
-            return $" Nome: {Nome} | Data de Nascimento {DataNascimento} | CPF: {Cpf}";
+            return $"Nome: {Nome} | Data de Nascimento {DataNascimento.ToShortDateString()} | CPF: {Cpf}";
+        }
+
+        public override string ResumoCliente()
+        {
+            return $"{base.ResumoCliente()} | Nome: {Nome} | Data de Nascimento {DataNascimento.ToShortDateString()} | CPF: {Cpf}";
         }
     }
 }

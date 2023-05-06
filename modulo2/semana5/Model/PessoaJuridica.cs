@@ -17,5 +17,9 @@ namespace semana5.Model
         public String ResumoJuridica() {
             return $" CNPJ: {Cnpj} | Razão Social: {RazaoSocial}";
         }
+
+        public override String ResumoCliente() {
+            return $"{base.ResumoCliente()} | CNPJ: {Cnpj} | Razão Social: {RazaoSocial}";
+        }
     }
 }

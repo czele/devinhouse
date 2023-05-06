@@ -17,7 +17,7 @@ namespace semana5.Service
         }
 
         public void CriarConta() {
-            Console.Write("Opção: (1 - Pessoa Física | 2 - Pessoa Jurídica)");
+            Console.Write("Opção: (1 - Pessoa Física | 2 - Pessoa Jurídica): ");
             int opcao = Int32.Parse(Console.ReadLine());
 
             if (opcao == 1) {
