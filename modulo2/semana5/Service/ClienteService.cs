@@ -4,56 +4,75 @@ namespace semana5.Service
 {
     public class ClienteService
     {
-        public static List<Cliente> clientes = new List<Cliente>();
-     
+        private static List<Cliente> _clientes = new List<Cliente>();
+
+        private Cliente PreencheCliente(Cliente cliente) {
+            Console.Write("Número da conta: ");
+            cliente.NumeroConta = Int32.Parse(Console.ReadLine());
+            Console.Write("Endereço: ");
+            cliente.Endereco = Console.ReadLine();
+            Console.Write("Telefone: ");
+            cliente.Telefone = Console.ReadLine();
+            return cliente; 
+        }
+
         public void CriarConta() {
-            Console.Write("Opção: ");
+            Console.Write("Opção: (1 - Pessoa Física | 2 - Pessoa Jurídica)");
             int opcao = Int32.Parse(Console.ReadLine());
 
             if (opcao == 1) {
-                PessoaFisica pessoaFisica = new PessoaFisica();
-                Console.Write("Número da conta: ");
-                pessoaFisica.NumeroConta = Int32.Parse(Console.ReadLine());
-                Console.Write("Endereço: ");
-                pessoaFisica.Endereco = Console.ReadLine();
-                Console.Write("Telefone: ");
-                pessoaFisica.Telefone = Console.ReadLine();
-                Console.Write("Nome: ");
-                pessoaFisica.Nome = Console.ReadLine();
-                Console.Write("Data de Nascimento: ");
-                pessoaFisica.DataNascimento = DateTime.Parse(Console.ReadLine());
-                if (pessoaFisica.EhMaior() == false) {
-                    Console.WriteLine("Uma pessoa menor de idade não pode ter uma conta");
-                } else {
-                    Console.Write("CPF: ");
-                    pessoaFisica.Cpf = Console.ReadLine();
-                    clientes.Add(pessoaFisica);
-                }
+                CriarContaPessoaFisica();
 
             } else if (opcao == 2) {
-                PessoaJuridica pessoaJuridica = new PessoaJuridica();
-                Console.Write("Número da conta: ");
-                pessoaJuridica.NumeroConta = Int32.Parse(Console.ReadLine());
-                Console.Write("Endereço: ");
-                pessoaJuridica.Endereco = Console.ReadLine();
-                Console.Write("Telefone: ");
-                pessoaJuridica.Telefone = Console.ReadLine();
-                Console.Write("CNPJ: ");
-                pessoaJuridica.Cnpj = long.Parse(Console.ReadLine());
-                Console.Write("Razão Social: ");
-                pessoaJuridica.RazaoSocial = Console.ReadLine();
-                clientes.Add(pessoaJuridica);
-                
+                CriarContaPessoaJuridica();
+                   
             } else {
                 Console.WriteLine("Opção incorreta");
             }
         }
-
+    
         public void ExibirClientes() {
-                foreach (Cliente cliente in clientes) {
-                    Console.WriteLine(cliente.ResumoCliente());
-                }
+            foreach (Cliente cliente in _clientes) {
+                Console.WriteLine(cliente.ResumoCliente());
             }
+        }
+
+        public Cliente BuscarClientePorNumeroDeConta(int numeroConta) {
+            return _clientes.Find(x => x.NumeroConta == numeroConta);
+        }
+
+        private void CriarContaPessoaFisica() {
+            PessoaFisica clientePF = new PessoaFisica();
+
+            Console.Write("Data de Nascimento: ");
+            //Usar o Tryparse
+            clientePF.DataNascimento = DateTime.Parse(Console.ReadLine());
+
+            if (!clientePF.EhMaior()) {
+                Console.WriteLine("Cliente menor de idade.");
+                return;
+            }
+
+            PreencheCliente(clientePF);
+
+            Console.Write("CPF: ");
+            clientePF.Cpf = Console.ReadLine();
+            Console.Write("Nome: ");
+            clientePF.Nome = Console.ReadLine();
+
+            _clientes.Add(clientePF);
+        }
+
+        private void CriarContaPessoaJuridica() {
+            PessoaJuridica clientePJ = new PessoaJuridica();
+            PreencheCliente(clientePJ);
+            Console.Write("CNPJ: ");
+            clientePJ.Cnpj = long.Parse(Console.ReadLine());
+            Console.Write("Razão Social: ");
+            clientePJ.RazaoSocial = Console.ReadLine();
+
+            _clientes.Add(clientePJ);
+        }
 
     }
 }
