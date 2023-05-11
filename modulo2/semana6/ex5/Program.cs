@@ -2,7 +2,7 @@
 {
     private static void Main(string[] args)
     {
-        List<double> lista = new List<double>(){ 1.5, 2.7, 3.2, 5 };  
+        List<double> lista = new List<double>(){ 1.5, 2.7, 3.2, 5, 500, -5 };  
         List<double> listaNova = new List<double>();
 
         for(int i=lista.Count()-1; i >= 0; i--) {
