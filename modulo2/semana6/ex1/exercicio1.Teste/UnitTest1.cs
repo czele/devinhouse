@@ -1,3 +1,5 @@
+using exercicio1;
+
 namespace exercicio1.Teste;
 
 public class Tests
@@ -8,8 +10,12 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void TestandoSoma()
     {
-        Assert.Pass();
+        List<double> valores = new List<double>() {6, -8, 9.6, 7};
+        double resultado = Soma.SomarTodos(valores);
+        double resultadoFinal = 6 + (-8) + 9.6 + 7; 
+
+        Assert.AreEqual(resultadoFinal, resultado);
     }
 }
