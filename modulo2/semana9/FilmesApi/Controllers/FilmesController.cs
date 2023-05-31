@@ -25,6 +25,7 @@ namespace FilmesApi.Controllers
         public IActionResult Get(int id)
         {
             Filme filme = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
+
             if (filme is null)
             {
                 return NotFound();
@@ -60,8 +61,18 @@ namespace FilmesApi.Controllers
 
         // DELETE api/<FilmesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            Filme filmeUpdate = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
+            if (filmeUpdate is null)
+            {
+                return NotFound();
+            }
+
+            MockFilmes.Filmes.Remove(filmeUpdate);
+
+            return NoContent();
+
         }
     }
 }
