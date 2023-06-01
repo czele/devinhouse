@@ -14,6 +14,11 @@ namespace FilmesApi.Controllers
     [ApiController]
     public class FilmesController : ControllerBase
     {
+        /// <summary>
+        /// Lista mocada de filmes
+        /// </summary>
+        /// <returns>Retorna uma lista mocada de filmes</returns>
+        /// <response code="200">Sucesso no retorno da lista mocada de filmes</response>
         // GET: api/<FilmesController>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -22,6 +27,13 @@ namespace FilmesApi.Controllers
             return Ok(MockFilmes.Filmes);
         }
 
+        /// <summary>
+        /// Requisição do item de uma lista mocada
+        /// </summary>
+        /// <param name="id">Id do filme</param>
+        /// <returns>Retorno do objeto filme</returns>
+        /// <response code="404">Filme não encontrado</response>
+        /// <response code="200">Sucesso no retorno do item de uma lista</response>
         // GET api/<FilmesController>/5
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -37,6 +49,12 @@ namespace FilmesApi.Controllers
             return Ok(filme);
         }
 
+        /// <summary>
+        /// Criação de um filme
+        /// </summary>
+        /// <param name="filme">Objeto filme</param>
+        /// <returns>Criação do objeto Filme</returns>
+        /// <response code="201">Objeto filme criado com sucesso</response>
         // POST api/<FilmesController>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -46,6 +64,14 @@ namespace FilmesApi.Controllers
             return CreatedAtAction(nameof(Get), new { id = filme.Id }, filme);
         }
 
+        /// <summary>
+        /// Atualização do filme
+        /// </summary>
+        /// <param name="id">Id do filme</param>
+        /// <param name="filme">Objeto Filme</param>
+        /// <returns>Atualização do filme</returns>
+        /// <response code="404">Filme não encontrado</response>
+        /// <response code="204">Atualização de filme realizada com sucesso</response>
         // PUT api/<FilmesController>/5
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -66,6 +92,13 @@ namespace FilmesApi.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Remoção do filme
+        /// </summary>
+        /// <param name="id">Id do filme</param>
+        /// <returns>Remoção do filme</returns>
+        /// <response code="404">Filme não encontrado</response>
+        /// <response code="204">Remoção de filme realizada com sucesso</response>
         // DELETE api/<FilmesController>/5
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

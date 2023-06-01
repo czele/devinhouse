@@ -7,11 +7,11 @@ C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\FilmesApi.runtimec
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\FilmesApi.dll
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\ref\FilmesApi.dll
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\FilmesApi.pdb
+C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\FilmesApi.xml
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\repo\devinhouse\modulo2\semana9\FilmesApi\obj\Debug\net5.0\FilmesApi.csproj.AssemblyReference.cache
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\obj\Debug\net5.0\FilmesApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\obj\Debug\net5.0\FilmesApi.AssemblyInfoInputs.cache
 C:\repo\devinhouse\modulo2\semana9\FilmesApi\obj\Debug\net5.0\FilmesApi.AssemblyInfo.cs
