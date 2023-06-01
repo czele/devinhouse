@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FilmesApi.Models;
+using Microsoft.AspNetCore.Http;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,6 +16,7 @@ namespace FilmesApi.Controllers
     {
         // GET: api/<FilmesController>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Get()
         {
             return Ok(MockFilmes.Filmes);
@@ -22,6 +24,8 @@ namespace FilmesApi.Controllers
 
         // GET api/<FilmesController>/5
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Get(int id)
         {
             Filme filme = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
@@ -35,6 +39,7 @@ namespace FilmesApi.Controllers
 
         // POST api/<FilmesController>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         public IActionResult Post([FromBody] Filme filme)
         {
             MockFilmes.Filmes.Add(filme);
@@ -43,6 +48,8 @@ namespace FilmesApi.Controllers
 
         // PUT api/<FilmesController>/5
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult Put(int id, [FromBody] Filme filme)
         {
             Filme filmeUpdate = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
@@ -61,6 +68,8 @@ namespace FilmesApi.Controllers
 
         // DELETE api/<FilmesController>/5
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult Delete(int id)
         {
             Filme filmeUpdate = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
