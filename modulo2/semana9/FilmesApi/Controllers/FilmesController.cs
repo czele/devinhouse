@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace FilmesApi.Controllers
 {
-    [Route("api/filmes")]
+    [Route("api/v{version:apiVersion}/filmes")]
     [ApiController]
     public class FilmesController : ControllerBase
     {
