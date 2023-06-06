@@ -59,7 +59,7 @@ namespace FilmesApi
             services.ConfigureOptions<ConfigureSwaggerOptions>();
 
             services.AddDbContext<FilmesContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("SeverConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("ServerConnection")));
 
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling =
