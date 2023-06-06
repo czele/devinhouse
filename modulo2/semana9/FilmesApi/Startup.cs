@@ -1,8 +1,10 @@
+using FilmesApi.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -55,6 +57,13 @@ namespace FilmesApi
                 });
 
             services.ConfigureOptions<ConfigureSwaggerOptions>();
+
+            services.AddDbContext<FilmesContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("SeverConnection")));
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling =
+                Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
         }
 
