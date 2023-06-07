@@ -121,7 +121,7 @@ namespace FilmesApi.Controllers
         {
             var filme = await _filmesContext.Filmes.FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(true);
             
-            if (filmeUpdate is null)
+            if (filme is null)
             {
                 return NotFound();
             }
@@ -129,6 +129,7 @@ namespace FilmesApi.Controllers
             _filmesContext.Filmes.Remove(filme);
             await _filmesContext.SaveChangesAsync();
 
+            return NoContent();
 
         }
     }
