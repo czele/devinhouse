@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FilmesApi.Models;
 using Microsoft.AspNetCore.Http;
 using FilmesApi.Context;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -32,9 +33,10 @@ namespace FilmesApi.Controllers
         // GET: api/<FilmesController>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(MockFilmes.Filmes);
+            var filmes = await _filmesContext.Filmes.ToListAsync().ConfigureAwait(true);
+            return Ok(filmes);
         }
 
         /// <summary>
@@ -48,9 +50,9 @@ namespace FilmesApi.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            Filme filme = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
+            Filme filme = await _filmesContext.Filmes.FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(true);
 
             if (filme is null)
             {
@@ -68,9 +70,12 @@ namespace FilmesApi.Controllers
         // POST api/<FilmesController>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        public IActionResult Post([FromBody] Filme filme)
+        public async Task<IActionResult> Post([FromBody] Filme filme)
         {
-            MockFilmes.Filmes.Add(filme);
+            _filmesContext.Filmes.Add(filme);
+
+            await _filmesContext.SaveChangesAsync();
+
             return CreatedAtAction(nameof(Get), new { id = filme.Id }, filme);
         }
 
@@ -86,19 +91,18 @@ namespace FilmesApi.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public IActionResult Put(int id, [FromBody] Filme filme)
+        public async Task<IActionResult> Put(int id, [FromBody] Filme filme)
         {
-            Filme filmeUpdate = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
-            if(filmeUpdate is null)
+            bool existeFilme = await _filmesContext.Filmes.AnyAsync(x => x.Id == id).ConfigureAwait(true);
+          
+            if(!existeFilme)
             {
                 return NotFound();
             }
-            var index = MockFilmes.Filmes.IndexOf(filmeUpdate);
 
-            if(index != -1)
-            {
-                MockFilmes.Filmes[index] = filme;
-            }
+            _filmesContext.Entry(filme).State = EntityState.Modified;
+            await _filmesContext.SaveChangesAsync();
+
             return NoContent();
         }
 
@@ -113,17 +117,18 @@ namespace FilmesApi.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            Filme filmeUpdate = MockFilmes.Filmes.FirstOrDefault(x => x.Id == id);
+            var filme = await _filmesContext.Filmes.FirstOrDefaultAsync(x => x.Id == id).ConfigureAwait(true);
+            
             if (filmeUpdate is null)
             {
                 return NotFound();
             }
 
-            MockFilmes.Filmes.Remove(filmeUpdate);
+            _filmesContext.Filmes.Remove(filme);
+            await _filmesContext.SaveChangesAsync();
 
-            return NoContent();
 
         }
     }
