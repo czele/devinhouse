@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FilmesApi.Models;
 using Microsoft.AspNetCore.Http;
+using FilmesApi.Context;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,6 +15,15 @@ namespace FilmesApi.Controllers
     [ApiController]
     public class FilmesController : ControllerBase
     {
+
+        private readonly FilmesContext _filmesContext;
+
+        public FilmesController(FilmesContext filmesContext)
+        {
+            _filmesContext = filmesContext;
+        }
+
+
         /// <summary>
         /// Lista mocada de filmes
         /// </summary>
