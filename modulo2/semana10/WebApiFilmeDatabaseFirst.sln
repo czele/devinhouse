@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiFilmeDatabaseFirst", "..\semana9\WebApiFilmeDatabaseFirst\WebApiFilmeDatabaseFirst.csproj", "{73317B12-6EE2-4FC4-B62D-ACA4C0766A89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73317B12-6EE2-4FC4-B62D-ACA4C0766A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73317B12-6EE2-4FC4-B62D-ACA4C0766A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73317B12-6EE2-4FC4-B62D-ACA4C0766A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73317B12-6EE2-4FC4-B62D-ACA4C0766A89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {470F34F3-539E-444A-99E4-0F8502BE8872}
+	EndGlobalSection
+EndGlobal
