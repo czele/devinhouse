@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApiFilmeDatabaseFirst.Context;
 
 namespace WebApiFilmeDatabaseFirst
 {
@@ -32,6 +34,13 @@ namespace WebApiFilmeDatabaseFirst
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiFilmeDatabaseFirst", Version = "v1" });
             });
+
+            services.AddDbContext<FilmeContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("ServerConnection")));
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling =
+                Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
