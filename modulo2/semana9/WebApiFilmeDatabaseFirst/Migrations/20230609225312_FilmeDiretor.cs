@@ -2,12 +2,12 @@
 
 namespace WebApiFilmeDatabaseFirst.Migrations
 {
-    public partial class CricacaoTabelasDiretorFilmeDiretores : Migration
+    public partial class FilmeDiretor : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Diretores",
+                name: "Diretor",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -17,7 +17,7 @@ namespace WebApiFilmeDatabaseFirst.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Diretores", x => x.Id);
+                    table.PrimaryKey("PK_Diretor", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -37,26 +37,25 @@ namespace WebApiFilmeDatabaseFirst.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "FilmeDiretores",
+                name: "FilmeDiretor",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdFilme = table.Column<int>(type: "int", nullable: false),
-                    IdDiretor = table.Column<int>(type: "int", nullable: false),
-                    DiretoresId = table.Column<int>(type: "int", nullable: true)
+                    IdDiretor = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_FilmeDiretores", x => x.Id);
+                    table.PrimaryKey("PK_FilmeDiretor", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_FilmeDiretores_Diretores_DiretoresId",
-                        column: x => x.DiretoresId,
-                        principalTable: "Diretores",
+                        name: "FK_FilmeDiretor_Diretor_IdDiretor",
+                        column: x => x.IdDiretor,
+                        principalTable: "Diretor",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_FilmeDiretores_Filmes_IdFilme",
+                        name: "FK_FilmeDiretor_Filmes_IdFilme",
                         column: x => x.IdFilme,
                         principalTable: "Filmes",
                         principalColumn: "Id",
@@ -64,23 +63,23 @@ namespace WebApiFilmeDatabaseFirst.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_FilmeDiretores_DiretoresId",
-                table: "FilmeDiretores",
-                column: "DiretoresId");
+                name: "IX_FilmeDiretor_IdDiretor",
+                table: "FilmeDiretor",
+                column: "IdDiretor");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FilmeDiretores_IdFilme",
-                table: "FilmeDiretores",
+                name: "IX_FilmeDiretor_IdFilme",
+                table: "FilmeDiretor",
                 column: "IdFilme");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "FilmeDiretores");
+                name: "FilmeDiretor");
 
             migrationBuilder.DropTable(
-                name: "Diretores");
+                name: "Diretor");
 
             migrationBuilder.DropTable(
                 name: "Filmes");

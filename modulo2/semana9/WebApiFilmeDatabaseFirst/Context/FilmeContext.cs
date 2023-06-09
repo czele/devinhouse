@@ -19,8 +19,8 @@ namespace WebApiFilmeDatabaseFirst.Context
         }
 
         public virtual DbSet<Filme> Filmes { get; set; }
-        public virtual DbSet<Diretor> Diretores { get; set; }
-        public virtual DbSet<FilmeDiretor> FilmeDiretores { get; set; }
+        public virtual DbSet<Diretor> Diretor { get; set; }
+        public virtual DbSet<FilmeDiretor> FilmeDiretor { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

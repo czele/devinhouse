@@ -19,7 +19,7 @@ namespace WebApiFilmeDatabaseFirst.Models
 
         [ForeignKey("Diretor")]
         public int IdDiretor { get; set; }
-        public Diretor Diretores { get; set; }
+        public Diretor Diretor { get; set; }
 
     }
 }
