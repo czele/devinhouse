@@ -136,3 +136,4 @@ C:\repo\devinhouse\modulo2\semana9\WebApiFilmeDatabaseFirst\bin\Debug\net5.0\zh-
 C:\repo\devinhouse\modulo2\semana9\WebApiFilmeDatabaseFirst\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\repo\devinhouse\modulo2\semana9\WebApiFilmeDatabaseFirst\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\repo\devinhouse\modulo2\semana9\WebApiFilmeDatabaseFirst\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\repo\devinhouse\modulo2\semana9\WebApiFilmeDatabaseFirst\bin\Debug\net5.0\AutoMapper.dll
