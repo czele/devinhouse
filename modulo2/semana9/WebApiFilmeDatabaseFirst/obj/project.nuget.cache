@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NLNyp3/rZH0Es4Mr7A5abEE6AEjakH8JvfEh/qtunFQkYiKr81aYlkzawXUGQANsenW7nZE71C4WEQbSSKMYUg==",
+  "dgSpecHash": "mCZVVBhpKlM8BUktfFfnjUrYC0hvSfL5zWJM7YKCISGGCOvxo4PyWqCruquQbBNEftumOG1wVljGDkU2c4ENdw==",
   "success": true,
   "projectFilePath": "C:\\repo\\devinhouse\\modulo2\\semana9\\WebApiFilmeDatabaseFirst\\WebApiFilmeDatabaseFirst.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Camila\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Camila\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Camila\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Camila\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.17\\microsoft.aspnetcore.jsonpatch.5.0.17.nupkg.sha512",

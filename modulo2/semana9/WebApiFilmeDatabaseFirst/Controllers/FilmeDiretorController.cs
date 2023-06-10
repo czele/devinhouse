@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiFilmeDatabaseFirst.Context;
+using WebApiFilmeDatabaseFirst.DTO;
 using WebApiFilmeDatabaseFirst.Models;
 
 namespace WebApiFilmeDatabaseFirst.Controllers
@@ -76,8 +78,12 @@ namespace WebApiFilmeDatabaseFirst.Controllers
         // POST: api/FilmeDiretors
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<FilmeDiretor>> PostFilmeDiretor(FilmeDiretor filmeDiretor)
+        public async Task<ActionResult<FilmeDiretor>> PostFilmeDiretor(FilmeDiretorDTO filmeDiretorDTO)
         {
+            var configuration = new MapperConfiguration(
+                )
+
+
             _context.FilmeDiretor.Add(filmeDiretor);
             await _context.SaveChangesAsync();
 
