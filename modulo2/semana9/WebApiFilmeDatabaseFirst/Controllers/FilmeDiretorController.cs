@@ -80,9 +80,11 @@ namespace WebApiFilmeDatabaseFirst.Controllers
         [HttpPost]
         public async Task<ActionResult<FilmeDiretor>> PostFilmeDiretor(FilmeDiretorDTO filmeDiretorDTO)
         {
-            var configuration = new MapperConfiguration(
-                )
+            var configuration = new MapperConfiguration(cfg => cfg.CreateMap<FilmeDiretorDTO, FilmeDiretor>());
 
+            var mapper = configuration.CreateMapper();
+
+            FilmeDiretor filmeDiretor = mapper.Map<FilmeDiretor>(filmeDiretorDTO);
 
             _context.FilmeDiretor.Add(filmeDiretor);
             await _context.SaveChangesAsync();
